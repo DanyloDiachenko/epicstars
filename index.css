@@ -113,7 +113,9 @@ body {
   color: var(--color-black);
   background-image: url("./images/backgrounds/main.svg");
   background-repeat: no-repeat;
-  background-size: auto;
+  /* background-size: 100vw 746px; */
+  /* background-size: 100vw 740px;
+  background-position: top left; */
   /*  */
   /*  */
   /*  */
