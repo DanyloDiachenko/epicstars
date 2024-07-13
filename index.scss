@@ -80,6 +80,13 @@ h3 {
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
+
+    @media (max-width: 480px) {
+        font-size: 24px;
+    }
+    @media (max-width: 360px) {
+        font-size: 16px;
+    }
 }
 
 p {
@@ -139,6 +146,10 @@ button {
     font-weight: 500;
     line-height: 18px;
     color: var(--color-blue);
+
+    @media (max-width: 360px) {
+        font-size: 14px;
+    }
 }
 
 .heading-lg {
@@ -146,6 +157,14 @@ button {
     font-size: 36px;
     font-weight: 700;
     line-height: 36px;
+
+    @media (max-width: 480px) {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    @media (max-width: 360px) {
+        font-size: 18px;
+    }
 }
 
 .heading-md {
@@ -371,6 +390,25 @@ body {
         display: flex;
         align-items: center;
 
+        @media (max-width: 960px) {
+            min-height: 1568px;
+            display: grid;
+            padding-top: 220px;
+            align-items: start;
+        }
+        @media (max-width: 768px) {
+            margin-top: 60px;
+            padding-top: 224px;
+        }
+        @media (max-width: 480px) {
+            min-height: 1216px;
+            padding-top: 35px;
+        }
+        @media (max-width: 360px) {
+            min-height: 1096px;
+            padding-top: 31px;
+        }
+
         .container {
             display: grid;
             grid-template-columns: minmax(0, 550px) 555px;
@@ -378,7 +416,16 @@ body {
             align-items: center;
             gap: 30px;
 
+            @media (max-width: 960px) {
+                grid-template-columns: minmax(0, 550px);
+                gap: 96px;
+            }
+            @media (max-width: 480px) {
+                gap: 70px;
+            }
+
             img {
+                width: 100%;
                 max-width: 550px;
             }
 
@@ -437,9 +484,29 @@ body {
         align-items: center;
         justify-content: space-between;
         gap: 30px;
-        grid-template-columns: 611px minmax(0, 550px);
+        grid-template-columns: minmax(480px, 611px) minmax(400px, 550px);
+
+        @media (max-width: 960px) {
+            margin-top: -214px;
+            grid-template-columns: minmax(0, 911px);
+            justify-content: center;
+            gap: 60px;
+        }
+        @media (max-width: 768px) {
+            margin-top: -211px;
+        }
+        @media (max-width: 480px) {
+            margin-top: -275px;
+        }
+        @media (max-width: 360px) {
+            margin-top: -123px;
+        }
 
         .left-column {
+            @media (max-width: 960px) {
+                order: 2;
+            }
+
             h3 {
                 margin-top: 10px;
             }
@@ -455,6 +522,10 @@ body {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 20px 35px;
+
+                @media (max-width: 480px) {
+                    grid-template-columns: 1fr;
+                }
 
                 a {
                     width: 100%;
@@ -472,8 +543,15 @@ body {
             }
         }
 
-        img {
+        .banner {
+            width: 100%;
             max-width: 550px;
+
+            @media (max-width: 960px) {
+                order: 1;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     }
 
@@ -488,6 +566,10 @@ body {
         display: flex;
         align-items: center;
 
+        @media (max-width: 960px) {
+            min-height: 960px;
+        }
+
         .title {
             color: var(--color-blue);
             text-align: center;
@@ -497,7 +579,7 @@ body {
             margin-top: 118px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 88px;
+            justify-content: space-between;
 
             .item {
                 display: flex;
