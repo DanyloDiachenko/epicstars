@@ -22,6 +22,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" type="text/css" href="./index.css" />
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcgDA8qAAAAAMClZNH53at5i4ef-eV5GsEfECk8"></script>
         <title>Document</title>
     </head>
     <body>
@@ -335,7 +336,10 @@
                                 required
                                 placeholder="Номер телефона"
                             />
-                            <!-- captcha -->
+                            <div
+                                class="g-recaptcha"
+                                data-sitekey="6LcgDA8qAAAAAMClZNH53at5i4ef-eV5GsEfECk8"
+                            ></div>
                             <button type="submit">Отправить</button>
                         </form>
                     </div>
@@ -346,4 +350,16 @@
             </div>
         </footer>
     </body>
+
+    <script>
+        function onClick(e) {
+            e.preventDefault();
+            grecaptcha.enterprise.ready(async () => {
+                const token = await grecaptcha.enterprise.execute(
+                    "6LcgDA8qAAAAAMClZNH53at5i4ef-eV5GsEfECk8",
+                    { action: "LOGIN" },
+                );
+            });
+        }
+    </script>
 </html>
