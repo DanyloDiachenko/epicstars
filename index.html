@@ -325,7 +325,7 @@
                     <div class="right-column">
                         <div class="subtitle">Свяжитесь с нами</div>
                         <h3>Оставьте заявку на обратную связь</h3>
-                        <form>
+                        <form id="demo-form">
                             <input
                                 type="text"
                                 required
@@ -340,7 +340,14 @@
                                 class="g-recaptcha"
                                 data-sitekey="6LcgDA8qAAAAAMClZNH53at5i4ef-eV5GsEfECk8"
                             ></div>
-                            <button type="submit">Отправить</button>
+                            <button
+                                class="g-recaptcha"
+                                data-sitekey="6LcgDA8qAAAAAMClZNH53at5i4ef-eV5GsEfECk8"
+                                data-callback="onSubmit"
+                                data-action="submit"
+                            >
+                                Отправить
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -352,14 +359,8 @@
     </body>
 
     <script>
-        function onClick(e) {
-            e.preventDefault();
-            grecaptcha.enterprise.ready(async () => {
-                const token = await grecaptcha.enterprise.execute(
-                    "6LcgDA8qAAAAAMClZNH53at5i4ef-eV5GsEfECk8",
-                    { action: "LOGIN" },
-                );
-            });
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
         }
     </script>
 </html>
