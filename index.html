@@ -3,22 +3,29 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
             rel="stylesheet"
         />
         <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap"
             rel="stylesheet"
         />
         <link
-            href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" type="text/css" href="./index.css" />
         <title>Document</title>
     </head>
     <body>
+        <div class="main-background"></div>
         <header class="container">
             <div class="left-column">
                 <img src="./images/icons/logo.svg" alt="Логотип" />
@@ -319,10 +326,18 @@
                         <div class="subtitle">Свяжитесь с нами</div>
                         <h3>Оставьте заявку на обратную связь</h3>
                         <form>
-                            <input type="text" required />
-                            <input type="tel" required />
+                            <input
+                                type="text"
+                                required
+                                placeholder="Ваше имя"
+                            />
+                            <input
+                                type="tel"
+                                required
+                                placeholder="Номер телефона"
+                            />
                             <!-- captcha -->
-                            <button type="submit"></button>
+                            <button type="submit">Отправить</button>
                         </form>
                     </div>
                 </div>

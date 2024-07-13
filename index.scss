@@ -1,7 +1,8 @@
 :root {
-    --font-lato: "Lato";
-    --font-opensans: "Open Sans";
-    --font-poppins: "Poppins";
+    --font-lato: "Lato", sans-serif;
+    --font-opensans: "Open Sans", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
 
     --color-white: #ffffff;
     --color-bluelight: #789dd8;
@@ -9,6 +10,8 @@
     --color-black: #333333;
     --color-grey: #e3e3e5;
     --color-greylight: #ffffff66;
+    --color-greyblue: #dfe3ed;
+    --color-greydark: #999999;
 
     --radius-sm: 8px;
     --radius-md: 10px;
@@ -113,10 +116,11 @@ button {
 /*  */
 
 body {
+    color: var(--color-black);
+
     background-image: url("./images/backgrounds/main.svg");
     background-repeat: no-repeat;
-    color: var(--color-black);
-    /* background-size: 100% auto; */
+    background-size: auto;
 
     /*  */
 
@@ -434,11 +438,12 @@ body {
     /*  */
 
     footer {
+        min-height: 764px;
         margin-top: 42px;
         background-image: url("./images/backgrounds/footer.svg");
         background-repeat: no-repeat;
         display: flex;
-        align-items: center;
+        align-items: end;
         color: var(--color-white);
 
         .container {
@@ -452,11 +457,57 @@ body {
                 img {
                     max-width: 463px;
                 }
+
+                .right-column {
+                    .subtitle {
+                        color: var(--color-white);
+                    }
+
+                    h3 {
+                        margin-top: 10px;
+                    }
+
+                    form {
+                        margin-top: 56px;
+
+                        input {
+                            width: 100%;
+                            max-width: 270px;
+                            display: block;
+                            border: 1px solid var(--color-greyblue);
+                            font-family: var(--font-roboto);
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 36px;
+                            padding: 5px 10px;
+                            margin-top: 25px;
+
+                            &::placeholder {
+                                color: var(--color-greydark);
+                            }
+                        }
+
+                        button {
+                            margin-top: 25px;
+                            background: var(--color-blue);
+                            padding: 15px 40px;
+                            text-transform: inherit;
+                            font-family: var(--font-opensans);
+                            font-size: 15px;
+                            font-weight: 400;
+                            line-height: 15px;
+                            text-align: center;
+                        }
+                    }
+                }
             }
 
             .subcontent {
-                margin-top: 64px;
+                font-family: var(--font-opensans);
+                margin-top: 40px;
                 text-align: center;
+                padding-top: 24px;
+                padding-bottom: 24px;
             }
         }
     }
