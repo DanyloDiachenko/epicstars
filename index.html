@@ -22,7 +22,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" type="text/css" href="./index.css" />
-        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcgDA8qAAAAAMClZNH53at5i4ef-eV5GsEfECk8"></script>
+
         <title>Document</title>
     </head>
     <body>
@@ -325,7 +325,7 @@
                     <div class="right-column">
                         <div class="subtitle">Свяжитесь с нами</div>
                         <h3>Оставьте заявку на обратную связь</h3>
-                        <form id="demo-form">
+                        <form action="?" method="POST" id="application-form">
                             <input
                                 type="text"
                                 required
@@ -336,18 +336,11 @@
                                 required
                                 placeholder="Номер телефона"
                             />
-                            <!-- <div
+                            <div
                                 class="g-recaptcha"
-                                data-sitekey="6LcgDA8qAAAAAMClZNH53at5i4ef-eV5GsEfECk8"
-                            ></div> -->
-                            <button
-                                class="g-recaptcha"
-                                data-sitekey="6LcgDA8qAAAAAMClZNH53at5i4ef-eV5GsEfECk8"
-                                data-callback="onSubmit"
-                                data-action="submit"
-                            >
-                                Отправить
-                            </button>
+                                data-sitekey="6LfoRg8qAAAAAOBe_X697t8t_KoHjrFq-beZFD1Y"
+                            ></div>
+                            <button>Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -358,9 +351,6 @@
         </footer>
     </body>
 
-    <script>
-        function onSubmit(token) {
-            document.getElementById("demo-form").submit();
-        }
-    </script>
+    <script src="./index.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </html>
