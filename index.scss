@@ -117,12 +117,9 @@ button {
 
 body {
     color: var(--color-black);
-
-    background-image: url("./images/backgrounds/main.svg");
+    background-image: url("./images/backgrounds/main.png");
     background-repeat: no-repeat;
-    /* background-size: 100vw 746px; */
-    /* background-size: 100vw 740px;
-    background-position: top left; */
+    background-size: 100vw 740px;
 
     /*  */
 
@@ -256,8 +253,9 @@ body {
     .about {
         min-height: 892.5px;
         margin-top: 24px;
-        background-image: url("./images/backgrounds/about.svg");
+        background-image: url("./images/backgrounds/about.png");
         background-repeat: no-repeat;
+        background-size: 100vw 100%;
         display: flex;
         align-items: center;
 
@@ -372,7 +370,8 @@ body {
     .time-in-it {
         min-height: 605px;
         margin-top: 124px;
-        background-image: url("./images/backgrounds/time-in-it.svg");
+        background-image: url("./images/backgrounds/time-in-it.png");
+        background-size: 100vw 100%;
         background-repeat: no-repeat;
         display: flex;
         align-items: center;
@@ -442,7 +441,8 @@ body {
     footer {
         min-height: 764px;
         margin-top: 42px;
-        background-image: url("./images/backgrounds/footer.svg");
+        background-image: url("./images/backgrounds/footer.png");
+        background-size: 100vw 100%;
         background-repeat: no-repeat;
         display: flex;
         align-items: end;
@@ -487,6 +487,10 @@ body {
                             &::placeholder {
                                 color: var(--color-greydark);
                             }
+                        }
+
+                        .g-recaptcha {
+                            margin-top: 25px;
                         }
 
                         button {
