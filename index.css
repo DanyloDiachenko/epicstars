@@ -1,0 +1,24 @@
+:root {
+  --font-lato: "Lato";
+  --font-opensans: "Open Sans";
+  --font-poppins: "Poppins";
+  --color-white: #ffffff;
+  --color-purple: #789dd8;
+  --color-blue: #1074d8;
+  --color-black: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-poppins);
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+}/*# sourceMappingURL=index.css.map */
