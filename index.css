@@ -113,6 +113,7 @@ button {
   line-height: 14.4px;
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /*  */

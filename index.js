@@ -1,5 +1,6 @@
 const applicationForm = document.querySelector("#application-form");
-const navigationMenu = document.querySelector("#navigationMenu");
+const navigationMenu = document.querySelector("#navigation-menu");
+const burgerButton = document.querySelector("#burger-button");
 
 applicationForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -230,3 +231,13 @@ function onBurgerMenuClick() {
         navigationMenu.classList.add("active");
     }
 }
+
+document.addEventListener("click", (event) => {
+    if (
+        !burgerButton.contains(event.target) &&
+        !navigationMenu.contains(event.target) &&
+        navigationMenu.classList.contains("active")
+    ) {
+        navigationMenu.classList.remove("active");
+    }
+});

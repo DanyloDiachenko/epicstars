@@ -42,7 +42,7 @@
                     </button>
                 </div>
             </div>
-            <div class="navigation-wrapper" id="navigationMenu">
+            <div class="navigation-wrapper" id="navigation-menu">
                 <nav>
                     <a href="#" data-lang="headerHelp">Допомога</a>
                     <a href="#" data-lang="headerBlog">Блог</a>
@@ -54,9 +54,15 @@
             </div>
             <div class="right-column">
                 <a href="#" data-lang="headerLogin">Увійти</a>
-                <button data-lang="headerRegistration">Реєстрація</button>
+                <a href="#">
+                    <button data-lang="headerRegistration">Реєстрація</button>
+                </a>
             </div>
-            <button class="burger-menu" onclick="onBurgerMenuClick()">
+            <button
+                class="burger-menu"
+                onclick="onBurgerMenuClick()"
+                id="burger-button"
+            >
                 <img
                     src="./images/icons/burger-menu.svg"
                     alt="Меню"
@@ -64,7 +70,6 @@
                 />
             </button>
         </header>
-
         <!--  -->
         <main>
             <section class="container main">
