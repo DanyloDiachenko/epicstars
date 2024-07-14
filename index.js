@@ -25,7 +25,9 @@ const translations = {
         headerMenu: "Меню",
         /*  */
         mainTitle: "EPICSTARS — платформа, що об’єднує ",
-        mainHighlight: "рекламодавців та блогерів",
+        mainHighlightAdvertisers: "рекламодавців",
+        mainHighlightAnd: " та ",
+        mainHighlightBlogers: "блогерів",
         mainSubtitle:
             "Допомагаємо брендам та компаніям транслювати свої маркетингові активності через лідерів думок та блогерів",
         mainCta: "давайте почнемо!",
@@ -107,7 +109,9 @@ const translations = {
         headerMenu: "Menu",
         /*  */
         mainTitle: "EPICSTARS — a platform uniting ",
-        mainHighlight: "advertisers and bloggers",
+        mainHighlightAdvertisers: "advertisers",
+        mainHighlightAnd: " and ",
+        mainHighlightBlogers: "bloggers",
         mainSubtitle:
             "We help brands and companies broadcast their marketing activities through opinion leaders and bloggers",
         mainCta: "let's get started!",

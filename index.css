@@ -292,7 +292,8 @@ body .main .left-column h1 {
   }
 }
 body .main .left-column h1 .underline {
-  text-decoration: underline;
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 4px;
 }
 body .main .left-column h2 {
   margin-top: 24px;
@@ -848,4 +849,4 @@ body footer .container .subcontent {
     margin-top: 113px;
     font-size: 11px;
   }
-}
+}/*# sourceMappingURL=index.css.map */

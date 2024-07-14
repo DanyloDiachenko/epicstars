@@ -301,7 +301,8 @@ body {
                 }
 
                 .underline {
-                    text-decoration: underline;
+                    border-bottom: 3px solid $color-white;
+                    padding-bottom: 4px;
                 }
             }
 
