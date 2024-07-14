@@ -1,4 +1,5 @@
 const applicationForm = document.querySelector("#application-form");
+const navigationMenu = document.querySelector("#navigationMenu");
 
 applicationForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -220,5 +221,12 @@ function changeLanguage(lng) {
         }
     });
 }
-
 changeLanguage("ua");
+
+function onBurgerMenuClick() {
+    if (navigationMenu.classList.contains("active")) {
+        navigationMenu.classList.remove("active");
+    } else {
+        navigationMenu.classList.add("active");
+    }
+}

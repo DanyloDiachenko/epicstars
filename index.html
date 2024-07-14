@@ -42,19 +42,21 @@
                     </button>
                 </div>
             </div>
-            <nav class="navigation">
-                <a href="#" data-lang="headerHelp">Допомога</a>
-                <a href="#" data-lang="headerBlog">Блог</a>
-                <a href="#" data-lang="headerTraining">Навчання</a>
-                <a href="#" data-lang="headerBloggerCatalog"
-                    >Каталог блогерів</a
-                >
-            </nav>
+            <div class="navigation-wrapper" id="navigationMenu">
+                <nav>
+                    <a href="#" data-lang="headerHelp">Допомога</a>
+                    <a href="#" data-lang="headerBlog">Блог</a>
+                    <a href="#" data-lang="headerTraining">Навчання</a>
+                    <a href="#" data-lang="headerBloggerCatalog"
+                        >Каталог блогерів</a
+                    >
+                </nav>
+            </div>
             <div class="right-column">
                 <a href="#" data-lang="headerLogin">Увійти</a>
                 <button data-lang="headerRegistration">Реєстрація</button>
             </div>
-            <button class="burger-menu">
+            <button class="burger-menu" onclick="onBurgerMenuClick()">
                 <img
                     src="./images/icons/burger-menu.svg"
                     alt="Меню"

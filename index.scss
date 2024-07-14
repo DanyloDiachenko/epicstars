@@ -18,12 +18,15 @@ $radius-lg: 15px;
 
 $shadow-article: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
 $shadow-secondary: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
+$shadow-dark: 0px 4px 6px rgba(0, 0, 0, 0.5);
 
 $breakpoint-1440: 1440px;
 $breakpoint-960: 960px;
 $breakpoint-768: 768px;
 $breakpoint-480: 480px;
 $breakpoint-360: 360px;
+
+$transition: 0.3s;
 
 * {
     box-sizing: border-box;
@@ -224,21 +227,50 @@ body {
             }
         }
 
-        .navigation {
-            display: flex;
-            gap: 30px;
-
+        .navigation-wrapper {
             @media (max-width: $breakpoint-960) {
-                display: none;
+                display: grid;
+                position: absolute;
+                top: 80px;
+                right: 20px;
+                grid-template-rows: 0fr;
+                z-index: 10;
+                transition: $transition;
+                box-shadow: $shadow-dark;
+                border-radius: $radius-sm;
+                background: $color-white;
+                overflow: hidden;
+
+                &.active {
+                    grid-template-rows: 1fr;
+                    padding: 10px;
+                }
             }
 
-            a {
-                color: $color-white;
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 21.6px;
-                font-family: $font-lato;
-                text-decoration: none;
+            nav {
+                display: flex;
+                gap: 30px;
+
+                @media (max-width: $breakpoint-960) {
+                    display: block;
+                    min-height: 0;
+                    text-align: right;
+                }
+
+                a {
+                    color: $color-white;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 21.6px;
+                    font-family: $font-lato;
+                    text-decoration: none;
+
+                    @media (max-width: $breakpoint-960) {
+                        display: block;
+                        padding: 8px 0;
+                        color: $color-blue;
+                    }
+                }
             }
         }
 
