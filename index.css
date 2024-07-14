@@ -454,16 +454,29 @@ body .about .container .right-column .progress-bars .item .info .percent {
   color: #1074d8;
 }
 body .about .container .right-column .progress-bars .item .bar {
-  width: 90%;
-  margin-top: 10px;
-  height: 7px;
-  background: #1074d8;
-}
-body .about .container .right-column .progress-bars .item .bar::after {
-  display: block;
+  width: 100%;
   height: 7px;
   background: #e3e3e5;
-  width: 100%;
+  position: relative;
+}
+body .about .container .right-column .progress-bars .item .bar .active {
+  height: 7px;
+  background: #1074d8;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .about .container .right-column .progress-bars .item .bar .active.web {
+  width: 90%;
+}
+body .about .container .right-column .progress-bars .item .bar .active.seo {
+  width: 85%;
+}
+body .about .container .right-column .progress-bars .item .bar .active.imarket {
+  width: 70%;
+}
+body .about .container .right-column .progress-bars .item .bar .active.mobdev {
+  width: 40%;
 }
 body .why-we {
   display: grid;

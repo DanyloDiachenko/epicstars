@@ -464,16 +464,30 @@ body {
                         }
 
                         .bar {
-                            width: 90%;
-                            margin-top: 10px;
+                            width: 100%;
                             height: 7px;
-                            background: $color-blue;
+                            background: $color-grey;
+                            position: relative;
 
-                            &::after {
-                                display: block;
+                            .active {
                                 height: 7px;
-                                background: $color-grey;
-                                width: 100%;
+                                background: $color-blue;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+
+                                &.web {
+                                    width: 90%;
+                                }
+                                &.seo {
+                                    width: 85%;
+                                }
+                                &.imarket {
+                                    width: 70%;
+                                }
+                                &.mobdev {
+                                    width: 40%;
+                                }
                             }
                         }
                     }
