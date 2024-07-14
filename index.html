@@ -28,45 +28,58 @@
     <body>
         <header class="container">
             <div class="left-column">
-                <img src="./images/icons/logo.svg" alt="Логотип" class="logo" />
+                <img
+                    src="./images/icons/logo.svg"
+                    alt="Логотип"
+                    class="logo"
+                    data-lang="headerLogoAlt"
+                />
                 <div class="languages">
-                    <a href="#">ENG</a>
+                    <button onclick="changeLanguage('eng')">ENG</button>
                     <span>|</span>
-                    <a href="#" class="active">RU</a>
+                    <button class="active" onclick="changeLanguage('ua')">
+                        UA
+                    </button>
                 </div>
             </div>
             <nav class="navigation">
-                <a href="#">Помощь</a>
-                <a href="#">Блог</a>
-                <a href="#">Обучение</a>
-                <a href="#">Каталог блогеров</a>
+                <a href="#" data-lang="headerHelp">Допомога</a>
+                <a href="#" data-lang="headerBlog">Блог</a>
+                <a href="#" data-lang="headerTraining">Навчання</a>
+                <a href="#" data-lang="headerBloggerCatalog"
+                    >Каталог блогерів</a
+                >
             </nav>
             <div class="right-column">
-                <a href="#">Войти</a>
-                <button>РЕГИСТРАЦИЯ</button>
+                <a href="#" data-lang="headerLogin">Увійти</a>
+                <button data-lang="headerRegistration">Реєстрація</button>
             </div>
-            <button class="burger-menu">
+            <button class="burger-menu" data-lang="headerMenu">
                 <img src="./images/icons/burger-menu.svg" alt="Меню" />
             </button>
         </header>
+
         <!--  -->
         <main>
             <section class="container main">
                 <div class="left-column">
-                    <h1>
-                        EPICSTARS — платформа, объединяющая
-                        <span class="underline">рекламодателей и блогеров</span>
+                    <h1 data-lang="mainTitle">
+                        EPICSTARS — платформа, що об’єднує
+                        <span class="underline" data-lang="mainHighlight"
+                            >рекламодавців та блогерів</span
+                        >
                     </h1>
-                    <h2>
-                        Помогаем брендам и компаниям транслировать свои
-                        маркетинговые активности через лидеров мнений и блогеров
+                    <h2 data-lang="mainSubtitle">
+                        Допомагаємо брендам та компаніям транслювати свої
+                        маркетингові активності через лідерів думок та блогерів
                     </h2>
-                    <button>давайте начнем!</button>
+                    <button data-lang="mainCta">давайте почнемо!</button>
                 </div>
                 <img
                     src="./images/banners/main.png"
                     alt="Баннер"
                     class="banner"
+                    data-lang="mainBannerAlt"
                 />
             </section>
             <!--  -->
@@ -74,71 +87,92 @@
                 <article>
                     <img
                         src="./images/icons/net-marketing.svg"
-                        alt="Интернет маркетинг"
+                        alt="Інтернет маркетинг"
+                        data-lang="service1Alt"
                     />
-                    <div class="title">Интернет маркетинг</div>
-                    <p>
-                        Опытные маркетологи компании Skyweb занимаются
-                        построением эффективных интернет маркетинг стратегий.
+                    <div class="title" data-lang="service1Title">
+                        Інтернет маркетинг
+                    </div>
+                    <p data-lang="service1Desc">
+                        Досвідчені маркетологи компанії Skyweb займаються
+                        побудовою ефективних інтернет маркетинг стратегій.
                     </p>
-                    <a href="#">Узнать больше</a>
+                    <a href="#" data-lang="serviceMore">Дізнатися більше</a>
                 </article>
                 <article>
                     <img
                         src="./images/icons/web-development.svg"
-                        alt="Веб Разработка"
+                        alt="Веб Розробка"
+                        data-lang="service2Alt"
                     />
-                    <div class="title">Веб Разработка</div>
-                    <p>
-                        В Skyweb вы можете заказать разработку сайта согласно
-                        предоставленному техническому заданию.
+                    <div class="title" data-lang="service2Title">
+                        Веб Розробка
+                    </div>
+                    <p data-lang="service2Desc">
+                        В Skyweb ви можете замовити розробку сайту згідно з
+                        наданим технічним завданням.
                     </p>
-                    <a href="#">Узнать больше</a>
+                    <a href="#" data-lang="serviceMore">Дізнатися більше</a>
                 </article>
                 <article>
-                    <img src="./images/icons/seo.svg" alt="SEO Оптимизация" />
-                    <div class="title">SEO Оптимизация</div>
-                    <p>
-                        Команда профессионалов выполняет комплексный анализ
-                        сайта и оптимиз ирует SEO показатели.
+                    <img
+                        src="./images/icons/seo.svg"
+                        alt="SEO Оптимізація"
+                        data-lang="service3Alt"
+                    />
+                    <div class="title" data-lang="service3Title">
+                        SEO Оптимізація
+                    </div>
+                    <p data-lang="service3Desc">
+                        Команда професіоналів виконує комплексний аналіз сайту і
+                        оптимізує SEO показники.
                     </p>
-                    <a href="#">Узнать больше</a>
+                    <a href="#" data-lang="serviceMore">Дізнатися більше</a>
                 </article>
                 <article>
                     <img
                         src="./images/icons/app-development.svg"
-                        alt="Разработка Приложений"
+                        alt="Розробка Додатків"
+                        data-lang="service4Alt"
                     />
-                    <div class="title">Разработка Приложений</div>
-                    <p>
-                        Мы делаем приложения для мобильных устройств с
-                        последующей поддержкой при релизе в маркетплейсы.
+                    <div class="title" data-lang="service4Title">
+                        Розробка Додатків
+                    </div>
+                    <p data-lang="service4Desc">
+                        Ми робимо додатки для мобільних пристроїв з подальшою
+                        підтримкою при релізі в маркетплейси.
                     </p>
-                    <a href="#">Узнать больше</a>
+                    <a href="#" data-lang="serviceMore">Дізнатися більше</a>
                 </article>
                 <article>
                     <img
                         src="./images/icons/site-boost.svg"
-                        alt="Ускорение Сайта"
+                        alt="Ускорення Сайта"
+                        data-lang="service5Alt"
                     />
-                    <div class="title">Ускорение Сайта</div>
-                    <p>
-                        Мы знаем, как ускорить ваш сайт. Разработчики
-                        увеличивают скорость загрузки и делают это качественно.
+                    <div class="title" data-lang="service5Title">
+                        Ускорення Сайта
+                    </div>
+                    <p data-lang="service5Desc">
+                        Ми знаємо, як прискорити ваш сайт. Розробники збільшують
+                        швидкість завантаження і роблять це якісно.
                     </p>
-                    <a href="#">Узнать больше</a>
+                    <a href="#" data-lang="serviceMore">Дізнатися більше</a>
                 </article>
                 <article>
                     <img
                         src="./images/icons/seo-copy.svg"
-                        alt="SEO Копирайтинг"
+                        alt="SEO Копірайтинг"
+                        data-lang="service6Alt"
                     />
-                    <div class="title">SEO Копирайтинг</div>
-                    <p>
-                        Большая команда копирайтеров в короткие сроки пишут
-                        уникльные SEO тексты для сайта с ключевыми словами.
+                    <div class="title" data-lang="service6Title">
+                        SEO Копірайтинг
+                    </div>
+                    <p data-lang="service6Desc">
+                        Велика команда копірайтерів в короткі терміни пише
+                        унікальні SEO тексти для сайту з ключовими словами.
                     </p>
-                    <a href="#">Узнать больше</a>
+                    <a href="#" data-lang="serviceMore">Дізнатися більше</a>
                 </article>
             </section>
             <!--  -->
@@ -146,25 +180,31 @@
                 <div class="container">
                     <img
                         src="./images/banners/about.png"
-                        alt="О нашей компании"
+                        alt="Про нашу компанію"
+                        class="banner"
+                        data-lang="aboutBannerAlt"
                     />
                     <div class="right-column">
-                        <div class="subtitle">О нашей компании</div>
-                        <h3>
-                            Наша задача – Обеспечить бизнес грамотной системой
-                            маркетинга
+                        <div class="subtitle" data-lang="aboutSubtitle">
+                            Про нашу компанію
+                        </div>
+                        <h3 data-lang="aboutMission">
+                            Наше завдання – Забезпечити бізнес грамотною
+                            системою маркетингу
                         </h3>
-                        <p class="line-height-md">
-                            Компания Skyweb предоставляет услуги
-                            профессиональных интернет маркетологов клиентам по
-                            всему миру. Среди наиболее востребованных услуг,
-                            нацеленных на развитие бизнеса, находятся следующие:
+                        <p class="line-height-md" data-lang="aboutDescription">
+                            Компанія Skyweb надає послуги професійних
+                            інтернет-маркетологів клієнтам по всьому світу.
+                            Серед найбільш затребуваних послуг, спрямованих на
+                            розвиток бізнесу, є наступні:
                         </p>
                         <div class="progress-bars">
                             <div class="item">
                                 <div class="info">
-                                    <span class="heading-md"
-                                        >Веб разработка</span
+                                    <span
+                                        class="heading-md"
+                                        data-lang="webDevSkill"
+                                        >Веб розробка</span
                                     >
                                     <span class="percent">90%</span>
                                 </div>
@@ -172,8 +212,10 @@
                             </div>
                             <div class="item">
                                 <div class="info">
-                                    <span class="heading-md"
-                                        >SEO Оптимизация</span
+                                    <span
+                                        class="heading-md"
+                                        data-lang="seoSkill"
+                                        >SEO Оптимізація</span
                                     >
                                     <span class="percent">85%</span>
                                 </div>
@@ -181,17 +223,21 @@
                             </div>
                             <div class="item">
                                 <div class="info">
-                                    <span class="heading-md"
-                                        >Интернет Маркетинг</span
+                                    <span
+                                        class="heading-md"
+                                        data-lang="marketingSkill"
+                                        >Інтернет Маркетинг</span
                                     >
                                     <span class="percent">70%</span>
                                 </div>
-                                <div class="bar"></div>
+                                <div the="bar"></div>
                             </div>
                             <div class="item">
                                 <div class="info">
-                                    <span class="heading-md"
-                                        >Мобильная разработка</span
+                                    <span
+                                        class="heading-md"
+                                        data-lang="mobileDevSkill"
+                                        >Мобільна розробка</span
                                     >
                                     <span class="percent">40%</span>
                                 </div>

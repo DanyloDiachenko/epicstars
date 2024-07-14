@@ -209,9 +209,13 @@ body {
                     display: none;
                 }
 
-                a {
+                button {
                     color: $color-greylight;
-                    text-decoration: none;
+                    background: none;
+                    padding: 0;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 21.6px;
 
                     &.active {
                         color: $color-white;
@@ -258,6 +262,7 @@ body {
 
             button {
                 box-shadow: 0px 1px 10px 0px #779dd8;
+                text-transform: uppercase;
             }
         }
 

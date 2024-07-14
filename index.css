@@ -206,11 +206,15 @@ body header .left-column .languages {
     display: none;
   }
 }
-body header .left-column .languages a {
+body header .left-column .languages button {
   color: rgba(255, 255, 255, 0.4);
-  text-decoration: none;
+  background: none;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
 }
-body header .left-column .languages a.active {
+body header .left-column .languages button.active {
   color: #ffffff;
 }
 body header .navigation {
@@ -250,6 +254,7 @@ body header .right-column a {
 }
 body header .right-column button {
   box-shadow: 0px 1px 10px 0px #779dd8;
+  text-transform: uppercase;
 }
 body header .burger-menu {
   display: block;
