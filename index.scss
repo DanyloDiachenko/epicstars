@@ -26,17 +26,17 @@ $breakpoint-480: 480px;
 $breakpoint-360: 360px;
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 h1 {
-    font-family: $font-lato;
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 57.6px;
     color: $color-white;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 57.6px;
+    font-family: $font-lato;
 
     @media (max-width: $breakpoint-960) {
         font-size: 36px;
@@ -53,11 +53,11 @@ h1 {
 }
 
 h2 {
-    font-family: $font-lato;
-    font-size: 36px;
-    font-weight: 300;
-    line-height: 43.2px;
     color: $color-white;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 43.2px;
+    font-family: $font-lato;
 
     @media (max-width: $breakpoint-960) {
         font-size: 24px;
@@ -74,10 +74,10 @@ h2 {
 }
 
 h3 {
-    font-family: $font-poppins;
-    font-size: 30px;
     font-weight: 700;
+    font-size: 30px;
     line-height: 36px;
+    font-family: $font-poppins;
 
     @media (max-width: $breakpoint-480) {
         font-size: 24px;
@@ -88,10 +88,10 @@ h3 {
 }
 
 p {
-    font-family: $font-opensans;
-    font-size: 16px;
     font-weight: 300;
+    font-size: 16px;
     line-height: 22.4px;
+    font-family: $font-opensans;
 
     @media (max-width: $breakpoint-768) {
         font-size: 14px;
@@ -103,12 +103,12 @@ p {
 }
 
 a {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25.2px;
     color: $color-blue;
-    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.2px;
     font-family: $font-poppins;
+    text-decoration: none;
 
     @media (max-width: $breakpoint-960) {
         font-size: 16px;
@@ -116,35 +116,35 @@ a {
 }
 
 button {
-    padding: 18px 30px;
-    border-radius: $radius-md;
     border: none;
-    font-family: $font-lato;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14.4px;
+    border-radius: $radius-md;
     background: $color-bluelight;
+    padding: 18px 30px;
     color: $color-white;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14.4px;
+    font-family: $font-lato;
     text-transform: uppercase;
 }
 
 /*  */
 
 .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
     width: 100%;
     max-width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .subtitle {
-    font-family: $font-poppins;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 18px;
     color: $color-blue;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: $font-poppins;
 
     @media (max-width: $breakpoint-360) {
         font-size: 14px;
@@ -152,10 +152,10 @@ button {
 }
 
 .heading-lg {
-    font-family: $font-poppins;
-    font-size: 36px;
     font-weight: 700;
+    font-size: 36px;
     line-height: 36px;
+    font-family: $font-poppins;
 
     @media (max-width: $breakpoint-480) {
         font-size: 24px;
@@ -167,19 +167,19 @@ button {
 }
 
 .heading-md {
-    font-family: $font-poppins;
-    font-size: 16px;
     font-weight: 600;
+    font-size: 16px;
     line-height: 16px;
+    font-family: $font-poppins;
 }
 
 /*  */
 
 body {
-    color: $color-black;
     background-image: url("./images/backgrounds/main.png");
-    background-repeat: no-repeat;
     background-size: 100vw 746px;
+    background-repeat: no-repeat;
+    color: $color-black;
 
     @media (max-width: $breakpoint-960) {
         background-size: 100vw 584px;
@@ -188,10 +188,10 @@ body {
     /*  */
 
     header {
-        margin-top: 30px;
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
 
         .left-column {
             display: flex;
@@ -199,22 +199,22 @@ body {
             gap: 20px;
 
             .languages {
-                font-size: 18px;
+                color: $color-greylight;
                 font-weight: 400;
+                font-size: 18px;
                 line-height: 21.6px;
                 font-family: $font-lato;
-                color: $color-greylight;
 
                 @media (max-width: $breakpoint-960) {
                     display: none;
                 }
 
                 button {
-                    color: $color-greylight;
                     background: none;
                     padding: 0;
-                    font-size: 18px;
+                    color: $color-greylight;
                     font-weight: 400;
+                    font-size: 18px;
                     line-height: 21.6px;
 
                     &.active {
@@ -233,12 +233,12 @@ body {
             }
 
             a {
-                font-family: $font-lato;
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 21.6px;
-                text-decoration: none;
                 color: $color-white;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21.6px;
+                font-family: $font-lato;
+                text-decoration: none;
             }
         }
 
@@ -252,12 +252,12 @@ body {
             }
 
             a {
-                font-family: $font-lato;
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 21.6px;
-                text-decoration: none;
                 color: $color-white;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21.6px;
+                font-family: $font-lato;
+                text-decoration: none;
             }
 
             button {
@@ -280,8 +280,8 @@ body {
     /*  */
 
     .main {
-        margin-top: 40px;
         position: relative;
+        margin-top: 40px;
 
         .left-column {
             min-height: 656px;
@@ -306,8 +306,8 @@ body {
             }
 
             h2 {
-                max-width: 590px;
                 margin-top: 24px;
+                max-width: 590px;
             }
 
             button {
@@ -316,23 +316,23 @@ body {
         }
 
         .banner {
-            max-width: 703px;
             position: absolute;
-            right: 0;
             top: 0;
+            right: 0;
+            max-width: 703px;
 
             @media (max-width: $breakpoint-960) {
                 max-width: 488px;
             }
             @media (max-width: $breakpoint-768) {
-                max-width: 347px;
                 top: auto;
                 bottom: 0;
+                max-width: 347px;
             }
             @media (max-width: $breakpoint-480) {
-                max-width: 264px;
                 right: 20px;
                 bottom: 61px;
+                max-width: 264px;
             }
         }
     }
@@ -340,25 +340,25 @@ body {
     /*  */
 
     .services {
-        margin-top: 24px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 50px;
+        margin-top: 24px;
 
         @media (max-width: $breakpoint-960) {
-            max-width: 760px;
             grid-template-columns: 1fr 1fr;
+            max-width: 760px;
         }
         @media (max-width: $breakpoint-480) {
-            margin-top: 40px;
             grid-template-columns: 1fr;
+            margin-top: 40px;
         }
 
         article {
             box-shadow: $shadow-article;
+            border-radius: $radius-lg;
             padding: 26px 18px;
             text-align: center;
-            border-radius: $radius-lg;
 
             @media (max-width: $breakpoint-960) {
                 padding: 26px 10px;
@@ -366,10 +366,10 @@ body {
 
             .title {
                 margin-top: 20px;
-                font-family: $font-lato;
-                font-size: 24px;
                 font-weight: 700;
+                font-size: 24px;
                 line-height: 28.8px;
+                font-family: $font-lato;
 
                 @media (max-width: $breakpoint-960) {
                     font-size: 20px;
@@ -387,31 +387,31 @@ body {
     /*  */
 
     .about {
-        min-height: 892.5px;
-        margin-top: 24px;
-        background-image: url("./images/backgrounds/about.png");
-        background-repeat: no-repeat;
-        background-size: 100vw 100%;
         display: flex;
         align-items: center;
+        margin-top: 24px;
+        background-image: url("./images/backgrounds/about.png");
+        background-size: 100vw 100%;
+        background-repeat: no-repeat;
+        min-height: 892.5px;
 
         @media (max-width: $breakpoint-960) {
-            min-height: 1568px;
             display: grid;
-            padding-top: 220px;
             align-items: start;
+            padding-top: 220px;
+            min-height: 1568px;
         }
         @media (max-width: $breakpoint-768) {
             margin-top: 60px;
             padding-top: 224px;
         }
         @media (max-width: $breakpoint-480) {
-            min-height: 1216px;
             padding-top: 35px;
+            min-height: 1216px;
         }
         @media (max-width: $breakpoint-360) {
-            min-height: 1096px;
             padding-top: 31px;
+            min-height: 1096px;
         }
 
         .container {
@@ -455,26 +455,26 @@ body {
 
                             .percent {
                                 margin-top: 9px;
-                                font-family: $font-opensans;
-                                font-size: 14px;
-                                font-weight: 600;
-                                line-height: 14px;
                                 color: $color-blue;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 14px;
+                                font-family: $font-opensans;
                             }
                         }
 
                         .bar {
+                            position: relative;
+                            background: $color-grey;
                             width: 100%;
                             height: 7px;
-                            background: $color-grey;
-                            position: relative;
 
                             .active {
-                                height: 7px;
-                                background: $color-blue;
                                 position: absolute;
                                 top: 0;
                                 left: 0;
+                                background: $color-blue;
+                                height: 7px;
 
                                 &.web {
                                     width: 90%;
@@ -500,16 +500,16 @@ body {
 
     .why-we {
         display: grid;
-        align-items: center;
-        justify-content: space-between;
-        gap: 30px;
         grid-template-columns: minmax(480px, 611px) minmax(400px, 550px);
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
 
         @media (max-width: $breakpoint-960) {
-            margin-top: -214px;
             grid-template-columns: minmax(0, 911px);
             justify-content: center;
             gap: 60px;
+            margin-top: -214px;
         }
         @media (max-width: $breakpoint-768) {
             margin-top: -211px;
@@ -531,33 +531,33 @@ body {
             }
 
             p {
-                max-width: 507px;
                 margin-top: 20px;
+                max-width: 507px;
             }
 
             .advantages {
-                max-width: 575px;
-                margin-top: 40px;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 20px 35px;
+                margin-top: 40px;
+                max-width: 575px;
 
                 @media (max-width: $breakpoint-480) {
                     grid-template-columns: 1fr;
                 }
 
                 a {
-                    width: 100%;
                     display: flex;
                     align-items: center;
                     gap: 10px;
-                    padding: 13px;
                     box-shadow: $shadow-secondary;
-                    font-family: $font-opensans;
-                    font-size: 15px;
-                    font-weight: 600;
-                    line-height: 22.5px;
+                    padding: 13px;
+                    width: 100%;
                     color: $color-black;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 22.5px;
+                    font-family: $font-opensans;
                 }
             }
         }
@@ -568,8 +568,8 @@ body {
 
             @media (max-width: $breakpoint-960) {
                 order: 1;
-                margin-left: auto;
                 margin-right: auto;
+                margin-left: auto;
             }
         }
     }
@@ -577,25 +577,25 @@ body {
     /*  */
 
     .time-in-it {
-        min-height: 605px;
+        display: flex;
+        align-items: center;
         margin-top: 124px;
         background-image: url("./images/backgrounds/time-in-it.png");
         background-size: 100vw 605px;
         background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
+        min-height: 605px;
 
         @media (max-width: $breakpoint-960) {
+            align-items: start;
             margin-top: 60px;
             background-size: 100vw 100%;
-            align-items: start;
             padding-top: 168px;
             padding-bottom: 174px;
         }
         @media (max-width: $breakpoint-480) {
             margin-top: 40px;
-            padding-bottom: 206px;
             padding-top: 159px;
+            padding-bottom: 206px;
         }
         @media (max-width: $breakpoint-360) {
             padding-bottom: 182px;
@@ -607,18 +607,18 @@ body {
         }
 
         .achievements {
-            margin-top: 118px;
             display: grid;
             grid-template-columns: repeat(4, auto);
             gap: 10px;
+            margin-top: 118px;
 
             @media (max-width: $breakpoint-960) {
-                max-width: 575px;
-                margin-top: 98px;
-                margin-left: auto;
-                margin-right: auto;
                 grid-template-columns: auto auto;
                 gap: 88px;
+                margin-top: 98px;
+                margin-right: auto;
+                margin-left: auto;
+                max-width: 575px;
             }
             @media (max-width: 600px) {
                 gap: 60px 26px;
@@ -627,9 +627,9 @@ body {
                 margin-top: 60px;
             }
             @media (max-width: $breakpoint-360) {
-                gap: 40px;
                 grid-template-columns: 210px;
                 justify-content: center;
+                gap: 40px;
             }
 
             .item {
@@ -648,19 +648,19 @@ body {
                 }
 
                 .number {
-                    font-family: $font-poppins;
-                    font-size: 24px;
                     font-weight: 700;
+                    font-size: 24px;
                     line-height: 24px;
+                    font-family: $font-poppins;
                 }
 
                 .description {
-                    margin-top: 5px;
-                    font-family: $font-poppins;
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 16px;
                     text-wrap: nowrap;
+                    margin-top: 5px;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-family: $font-poppins;
 
                     @media (max-width: 600px) {
                         text-wrap: wrap;
@@ -680,40 +680,40 @@ body {
         }
 
         .jobs {
-            margin-top: 40px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
+            margin-top: 40px;
 
             @media (max-width: $breakpoint-960) {
-                margin-top: 76px;
                 grid-template-columns: minmax(200px, 350px) minmax(200px, 350px);
                 justify-content: center;
+                margin-top: 76px;
             }
             @media (max-width: $breakpoint-480) {
                 grid-template-columns: 1fr;
             }
 
             div {
-                color: $color-blue;
                 box-shadow: $shadow-secondary;
-                padding: 17px;
                 border-radius: $radius-sm;
+                padding: 17px;
+                color: $color-blue;
 
                 @media (max-width: $breakpoint-960) {
                     width: 100%;
                     max-width: 350px;
 
                     @media (max-width: $breakpoint-480) {
-                        margin-left: auto;
                         margin-right: auto;
+                        margin-left: auto;
                     }
 
                     &:last-child {
                         grid-column-start: -3;
                         grid-column-end: -1;
-                        margin-left: auto;
                         margin-right: auto;
+                        margin-left: auto;
 
                         @media (max-width: $breakpoint-480) {
                             grid-column-start: auto;
@@ -728,19 +728,19 @@ body {
     /*  */
 
     footer {
-        min-height: 764px;
+        display: flex;
+        align-items: end;
         margin-top: 42px;
         background-image: url("./images/backgrounds/footer.png");
         background-size: 100vw 100%;
         background-repeat: no-repeat;
-        display: flex;
-        align-items: end;
+        min-height: 764px;
         color: $color-white;
 
         @media (max-width: $breakpoint-960) {
+            align-items: start;
             margin-top: 80px;
             min-height: auto;
-            align-items: start;
         }
         @media (max-width: $breakpoint-480) {
             margin-top: 76px;
@@ -798,16 +798,16 @@ body {
                         margin-top: 56px;
 
                         input {
+                            display: block;
+                            margin-top: 25px;
+                            border: 1px solid $color-greyblue;
+                            padding: 5px 10px;
                             width: 100%;
                             max-width: 270px;
-                            display: block;
-                            border: 1px solid $color-greyblue;
-                            font-family: $font-roboto;
-                            font-size: 16px;
                             font-weight: 400;
+                            font-size: 16px;
                             line-height: 36px;
-                            padding: 5px 10px;
-                            margin-top: 25px;
+                            font-family: $font-roboto;
 
                             &::placeholder {
                                 color: $color-greydark;
@@ -822,23 +822,23 @@ body {
                             margin-top: 25px;
                             background: $color-blue;
                             padding: 15px 40px;
-                            text-transform: inherit;
-                            font-family: $font-opensans;
-                            font-size: 15px;
                             font-weight: 400;
+                            font-size: 15px;
                             line-height: 15px;
+                            font-family: $font-opensans;
                             text-align: center;
+                            text-transform: inherit;
                         }
                     }
                 }
             }
 
             .subcontent {
-                font-family: $font-opensans;
                 margin-top: 40px;
-                text-align: center;
                 padding-top: 24px;
                 padding-bottom: 24px;
+                font-family: $font-opensans;
+                text-align: center;
 
                 @media (max-width: $breakpoint-960) {
                     margin-top: 40px;
