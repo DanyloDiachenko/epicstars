@@ -1,28 +1,3 @@
-:root {
-  --font-lato: "Lato", sans-serif;
-  --font-opensans: "Open Sans", sans-serif;
-  --font-poppins: "Poppins", sans-serif;
-  --font-roboto: "Roboto", sans-serif;
-  --color-white: #ffffff;
-  --color-bluelight: #789dd8;
-  --color-blue: #1074d8;
-  --color-black: #333333;
-  --color-grey: #e3e3e5;
-  --color-greylight: #ffffff66;
-  --color-greyblue: #dfe3ed;
-  --color-greydark: #999999;
-  --radius-sm: 8px;
-  --radius-md: 10px;
-  --radius-lg: 15px;
-  --shadow-article: 0px 0px 7px 0px #0000001a;
-  --shadow-secondary: 0px 0px 8px 0px #0000000d;
-  --breakpoint-1440: 1440px;
-  --breakpoint-960: 960px;
-  --breakpoint-768: 768px;
-  --breakpoint-480: 480px;
-  --breakpoint-360: 360px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -30,11 +5,11 @@
 }
 
 h1 {
-  font-family: var(--font-lato);
+  font-family: "Lato", sans-serif;
   font-size: 48px;
   font-weight: 800;
   line-height: 57.6px;
-  color: var(--color-white);
+  color: #ffffff;
 }
 @media (max-width: 960px) {
   h1 {
@@ -56,11 +31,11 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-lato);
+  font-family: "Lato", sans-serif;
   font-size: 36px;
   font-weight: 300;
   line-height: 43.2px;
-  color: var(--color-white);
+  color: #ffffff;
 }
 @media (max-width: 960px) {
   h2 {
@@ -82,7 +57,7 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-poppins);
+  font-family: "Poppins", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -99,7 +74,7 @@ h3 {
 }
 
 p {
-  font-family: var(--font-opensans);
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 22.4px;
@@ -117,9 +92,9 @@ a {
   font-size: 18px;
   font-weight: 500;
   line-height: 25.2px;
-  color: var(--color-blue);
+  color: #1074d8;
   text-decoration: none;
-  font-family: var(--font-poppins);
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 960px) {
   a {
@@ -129,14 +104,14 @@ a {
 
 button {
   padding: 18px 30px;
-  border-radius: var(--radius-md);
+  border-radius: 10px;
   border: none;
-  font-family: var(--font-lato);
+  font-family: "Lato", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 14.4px;
-  background: var(--color-bluelight);
-  color: var(--color-white);
+  background: #789dd8;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
@@ -151,11 +126,11 @@ button {
 }
 
 .subtitle {
-  font-family: var(--font-poppins);
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 18px;
-  color: var(--color-blue);
+  color: #1074d8;
 }
 @media (max-width: 360px) {
   .subtitle {
@@ -164,7 +139,7 @@ button {
 }
 
 .heading-lg {
-  font-family: var(--font-poppins);
+  font-family: "Poppins", sans-serif;
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
@@ -182,7 +157,7 @@ button {
 }
 
 .heading-md {
-  font-family: var(--font-poppins);
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 16px;
@@ -190,7 +165,7 @@ button {
 
 /*  */
 body {
-  color: var(--color-black);
+  color: #333333;
   background-image: url("./images/backgrounds/main.png");
   background-repeat: no-repeat;
   background-size: 100vw 740px;
@@ -223,8 +198,8 @@ body header .left-column .languages {
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
-  font-family: var(--font-lato);
-  color: var(--color-greylight);
+  font-family: "Lato", sans-serif;
+  color: rgba(255, 255, 255, 0.4);
 }
 @media (max-width: 960px) {
   body header .left-column .languages {
@@ -232,11 +207,11 @@ body header .left-column .languages {
   }
 }
 body header .left-column .languages a {
-  color: var(--color-greylight);
+  color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
 }
 body header .left-column .languages a.active {
-  color: var(--color-white);
+  color: #ffffff;
 }
 body header .navigation {
   display: flex;
@@ -248,12 +223,12 @@ body header .navigation {
   }
 }
 body header .navigation a {
-  font-family: var(--font-lato);
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 21.6px;
   text-decoration: none;
-  color: var(--color-white);
+  color: #ffffff;
 }
 body header .right-column {
   display: flex;
@@ -266,12 +241,12 @@ body header .right-column {
   }
 }
 body header .right-column a {
-  font-family: var(--font-lato);
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 21.6px;
   text-decoration: none;
-  color: var(--color-white);
+  color: #ffffff;
 }
 body header .right-column button {
   box-shadow: 0px 1px 10px 0px #779dd8;
@@ -366,10 +341,10 @@ body .services {
   }
 }
 body .services article {
-  box-shadow: var(--shadow-article);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
   padding: 26px 18px;
   text-align: center;
-  border-radius: var(--radius-lg);
+  border-radius: 15px;
 }
 @media (max-width: 960px) {
   body .services article {
@@ -378,7 +353,7 @@ body .services article {
 }
 body .services article .title {
   margin-top: 20px;
-  font-family: var(--font-lato);
+  font-family: "Lato", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 28.8px;
@@ -468,22 +443,22 @@ body .about .container .right-column .progress-bars .item .info {
 }
 body .about .container .right-column .progress-bars .item .info .percent {
   margin-top: 9px;
-  font-family: var(--font-opensans);
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 14px;
-  color: var(--color-blue);
+  color: #1074d8;
 }
 body .about .container .right-column .progress-bars .item .bar {
   width: 90%;
   margin-top: 10px;
   height: 7px;
-  background: var(--color-blue);
+  background: #1074d8;
 }
 body .about .container .right-column .progress-bars .item .bar::after {
   display: block;
   height: 7px;
-  background: var(--color-grey);
+  background: #e3e3e5;
   width: 100%;
 }
 body .why-we {
@@ -546,12 +521,12 @@ body .why-we .left-column .advantages a {
   align-items: center;
   gap: 10px;
   padding: 13px;
-  box-shadow: var(--shadow-secondary);
-  font-family: var(--font-opensans);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 22.5px;
-  color: var(--color-black);
+  color: #333333;
 }
 body .why-we .banner {
   width: 100%;
@@ -595,7 +570,7 @@ body .time-in-it {
   }
 }
 body .time-in-it .title {
-  color: var(--color-blue);
+  color: #1074d8;
   text-align: center;
 }
 body .time-in-it .achievements {
@@ -635,7 +610,7 @@ body .time-in-it .achievements .item {
   display: flex;
   align-items: center;
   gap: 15px;
-  color: var(--color-blue);
+  color: #1074d8;
 }
 @media (max-width: 480px) {
   body .time-in-it .achievements .item img {
@@ -648,14 +623,14 @@ body .time-in-it .achievements .item {
   }
 }
 body .time-in-it .achievements .item .number {
-  font-family: var(--font-poppins);
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
 }
 body .time-in-it .achievements .item .description {
   margin-top: 5px;
-  font-family: var(--font-poppins);
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
@@ -691,10 +666,10 @@ body .join-us .jobs {
   }
 }
 body .join-us .jobs div {
-  color: var(--color-blue);
-  box-shadow: var(--shadow-secondary);
+  color: #1074d8;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
   padding: 17px;
-  border-radius: var(--radius-sm);
+  border-radius: 8px;
 }
 @media (max-width: 960px) {
   body .join-us .jobs div {
@@ -730,7 +705,7 @@ body footer {
   background-repeat: no-repeat;
   display: flex;
   align-items: end;
-  color: var(--color-white);
+  color: #ffffff;
 }
 @media (max-width: 960px) {
   body footer {
@@ -794,7 +769,7 @@ body footer .container .content img {
   }
 }
 body footer .container .content .right-column .subtitle {
-  color: var(--color-white);
+  color: #ffffff;
 }
 body footer .container .content .right-column h3 {
   margin-top: 10px;
@@ -806,8 +781,8 @@ body footer .container .content .right-column form input {
   width: 100%;
   max-width: 270px;
   display: block;
-  border: 1px solid var(--color-greyblue);
-  font-family: var(--font-roboto);
+  border: 1px solid #dfe3ed;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 36px;
@@ -815,27 +790,27 @@ body footer .container .content .right-column form input {
   margin-top: 25px;
 }
 body footer .container .content .right-column form input::-moz-placeholder {
-  color: var(--color-greydark);
+  color: #999999;
 }
 body footer .container .content .right-column form input::placeholder {
-  color: var(--color-greydark);
+  color: #999999;
 }
 body footer .container .content .right-column form .g-recaptcha {
   margin-top: 25px;
 }
 body footer .container .content .right-column form button {
   margin-top: 25px;
-  background: var(--color-blue);
+  background: #1074d8;
   padding: 15px 40px;
   text-transform: inherit;
-  font-family: var(--font-opensans);
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 15px;
   text-align: center;
 }
 body footer .container .subcontent {
-  font-family: var(--font-opensans);
+  font-family: "Open Sans", sans-serif;
   margin-top: 40px;
   text-align: center;
   padding-top: 24px;

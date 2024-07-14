@@ -1,31 +1,29 @@
-:root {
-    --font-lato: "Lato", sans-serif;
-    --font-opensans: "Open Sans", sans-serif;
-    --font-poppins: "Poppins", sans-serif;
-    --font-roboto: "Roboto", sans-serif;
+$font-lato: "Lato", sans-serif;
+$font-opensans: "Open Sans", sans-serif;
+$font-poppins: "Poppins", sans-serif;
+$font-roboto: "Roboto", sans-serif;
 
-    --color-white: #ffffff;
-    --color-bluelight: #789dd8;
-    --color-blue: #1074d8;
-    --color-black: #333333;
-    --color-grey: #e3e3e5;
-    --color-greylight: #ffffff66;
-    --color-greyblue: #dfe3ed;
-    --color-greydark: #999999;
+$color-white: #ffffff;
+$color-bluelight: #789dd8;
+$color-blue: #1074d8;
+$color-black: #333333;
+$color-grey: #e3e3e5;
+$color-greylight: #ffffff66;
+$color-greyblue: #dfe3ed;
+$color-greydark: #999999;
 
-    --radius-sm: 8px;
-    --radius-md: 10px;
-    --radius-lg: 15px;
+$radius-sm: 8px;
+$radius-md: 10px;
+$radius-lg: 15px;
 
-    --shadow-article: 0px 0px 7px 0px #0000001a;
-    --shadow-secondary: 0px 0px 8px 0px #0000000d;
+$shadow-article: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
+$shadow-secondary: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
 
-    --breakpoint-1440: 1440px;
-    --breakpoint-960: 960px;
-    --breakpoint-768: 768px;
-    --breakpoint-480: 480px;
-    --breakpoint-360: 360px;
-}
+$breakpoint-1440: 1440px;
+$breakpoint-960: 960px;
+$breakpoint-768: 768px;
+$breakpoint-480: 480px;
+$breakpoint-360: 360px;
 
 * {
     margin: 0;
@@ -34,68 +32,68 @@
 }
 
 h1 {
-    font-family: var(--font-lato);
+    font-family: $font-lato;
     font-size: 48px;
     font-weight: 800;
     line-height: 57.6px;
-    color: var(--color-white);
+    color: $color-white;
 
-    @media (max-width: 960px) {
+    @media (max-width: $breakpoint-960) {
         font-size: 36px;
         line-height: 43.2px;
     }
-    @media (max-width: 480px) {
+    @media (max-width: $breakpoint-480) {
         font-size: 24px;
         line-height: 28.8px;
     }
-    @media (max-width: 360px) {
+    @media (max-width: $breakpoint-360) {
         font-size: 16px;
         line-height: 19.2px;
     }
 }
 
 h2 {
-    font-family: var(--font-lato);
+    font-family: $font-lato;
     font-size: 36px;
     font-weight: 300;
     line-height: 43.2px;
-    color: var(--color-white);
+    color: $color-white;
 
-    @media (max-width: 960px) {
+    @media (max-width: $breakpoint-960) {
         font-size: 24px;
         line-height: 28.8px;
     }
-    @media (max-width: 480px) {
+    @media (max-width: $breakpoint-480) {
         font-size: 16px;
         line-height: 19.2px;
     }
-    @media (max-width: 360px) {
+    @media (max-width: $breakpoint-360) {
         font-size: 14px;
         line-height: 16.8px;
     }
 }
 
 h3 {
-    font-family: var(--font-poppins);
+    font-family: $font-poppins;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
 
-    @media (max-width: 480px) {
+    @media (max-width: $breakpoint-480) {
         font-size: 24px;
     }
-    @media (max-width: 360px) {
+    @media (max-width: $breakpoint-360) {
         font-size: 16px;
     }
 }
 
 p {
-    font-family: var(--font-opensans);
+    font-family: $font-opensans;
     font-size: 16px;
     font-weight: 300;
     line-height: 22.4px;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-768) {
         font-size: 14px;
     }
 
@@ -108,25 +106,25 @@ a {
     font-size: 18px;
     font-weight: 500;
     line-height: 25.2px;
-    color: var(--color-blue);
+    color: $color-blue;
     text-decoration: none;
-    font-family: var(--font-poppins);
+    font-family: $font-poppins;
 
-    @media (max-width: 960px) {
+    @media (max-width: $breakpoint-960) {
         font-size: 16px;
     }
 }
 
 button {
     padding: 18px 30px;
-    border-radius: var(--radius-md);
+    border-radius: $radius-md;
     border: none;
-    font-family: var(--font-lato);
+    font-family: $font-lato;
     font-size: 12px;
     font-weight: 500;
     line-height: 14.4px;
-    background: var(--color-bluelight);
-    color: var(--color-white);
+    background: $color-bluelight;
+    color: $color-white;
     text-transform: uppercase;
 }
 
@@ -142,34 +140,34 @@ button {
 }
 
 .subtitle {
-    font-family: var(--font-poppins);
+    font-family: $font-poppins;
     font-size: 18px;
     font-weight: 500;
     line-height: 18px;
-    color: var(--color-blue);
+    color: $color-blue;
 
-    @media (max-width: 360px) {
+    @media (max-width: $breakpoint-360) {
         font-size: 14px;
     }
 }
 
 .heading-lg {
-    font-family: var(--font-poppins);
+    font-family: $font-poppins;
     font-size: 36px;
     font-weight: 700;
     line-height: 36px;
 
-    @media (max-width: 480px) {
+    @media (max-width: $breakpoint-480) {
         font-size: 24px;
         line-height: 36px;
     }
-    @media (max-width: 360px) {
+    @media (max-width: $breakpoint-360) {
         font-size: 18px;
     }
 }
 
 .heading-md {
-    font-family: var(--font-poppins);
+    font-family: $font-poppins;
     font-size: 16px;
     font-weight: 600;
     line-height: 16px;
@@ -178,12 +176,12 @@ button {
 /*  */
 
 body {
-    color: var(--color-black);
+    color: $color-black;
     background-image: url("./images/backgrounds/main.png");
     background-repeat: no-repeat;
     background-size: 100vw 740px;
 
-    @media (max-width: 960px) {
+    @media (max-width: $breakpoint-960) {
         background-size: 100vw 584px;
     }
 
@@ -204,19 +202,19 @@ body {
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 21.6px;
-                font-family: var(--font-lato);
-                color: var(--color-greylight);
+                font-family: $font-lato;
+                color: $color-greylight;
 
-                @media (max-width: 960px) {
+                @media (max-width: $breakpoint-960) {
                     display: none;
                 }
 
                 a {
-                    color: var(--color-greylight);
+                    color: $color-greylight;
                     text-decoration: none;
 
                     &.active {
-                        color: var(--color-white);
+                        color: $color-white;
                     }
                 }
             }
@@ -226,17 +224,17 @@ body {
             display: flex;
             gap: 30px;
 
-            @media (max-width: 960px) {
+            @media (max-width: $breakpoint-960) {
                 display: none;
             }
 
             a {
-                font-family: var(--font-lato);
+                font-family: $font-lato;
                 font-size: 18px;
                 font-weight: 500;
                 line-height: 21.6px;
                 text-decoration: none;
-                color: var(--color-white);
+                color: $color-white;
             }
         }
 
@@ -245,17 +243,17 @@ body {
             align-items: center;
             gap: 30px;
 
-            @media (max-width: 960px) {
+            @media (max-width: $breakpoint-960) {
                 display: none;
             }
 
             a {
-                font-family: var(--font-lato);
+                font-family: $font-lato;
                 font-size: 18px;
                 font-weight: 500;
                 line-height: 21.6px;
                 text-decoration: none;
-                color: var(--color-white);
+                color: $color-white;
             }
 
             button {
@@ -284,7 +282,7 @@ body {
             h1 {
                 max-width: 803px;
 
-                @media (max-width: 960px) {
+                @media (max-width: $breakpoint-960) {
                     max-width: 600px;
                 }
 
@@ -309,18 +307,18 @@ body {
             right: 0;
             top: 0;
 
-            @media (max-width: 960px) {
+            @media (max-width: $breakpoint-960) {
                 max-width: 488px;
             }
-            @media (max-width: 768px) {
+            @media (max-width: $breakpoint-768) {
                 max-width: 347px;
                 top: auto;
                 bottom: -136px;
             }
-            @media (max-width: 480px) {
+            @media (max-width: $breakpoint-480) {
                 max-width: 264px;
             }
-            @media (max-width: 360px) {
+            @media (max-width: $breakpoint-360) {
                 bottom: -183px;
             }
         }
@@ -334,15 +332,15 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 50px;
 
-        @media (max-width: 960px) {
+        @media (max-width: $breakpoint-960) {
             margin-top: 160px;
             max-width: 760px;
             grid-template-columns: 1fr 1fr;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $breakpoint-768) {
             margin-top: 181px;
         }
-        @media (max-width: 480px) {
+        @media (max-width: $breakpoint-480) {
             margin-top: 248px;
             grid-template-columns: 1fr;
         }
@@ -351,23 +349,23 @@ body {
         }
 
         article {
-            box-shadow: var(--shadow-article);
+            box-shadow: $shadow-article;
             padding: 26px 18px;
             text-align: center;
-            border-radius: var(--radius-lg);
+            border-radius: $radius-lg;
 
-            @media (max-width: 960px) {
+            @media (max-width: $breakpoint-960) {
                 padding: 26px 10px;
             }
 
             .title {
                 margin-top: 20px;
-                font-family: var(--font-lato);
+                font-family: $font-lato;
                 font-size: 24px;
                 font-weight: 700;
                 line-height: 28.8px;
 
-                @media (max-width: 960px) {
+                @media (max-width: $breakpoint-960) {
                     font-size: 20px;
                     line-height: 24px;
                 }
@@ -391,21 +389,21 @@ body {
         display: flex;
         align-items: center;
 
-        @media (max-width: 960px) {
+        @media (max-width: $breakpoint-960) {
             min-height: 1568px;
             display: grid;
             padding-top: 220px;
             align-items: start;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $breakpoint-768) {
             margin-top: 60px;
             padding-top: 224px;
         }
-        @media (max-width: 480px) {
+        @media (max-width: $breakpoint-480) {
             min-height: 1216px;
             padding-top: 35px;
         }
-        @media (max-width: 360px) {
+        @media (max-width: $breakpoint-360) {
             min-height: 1096px;
             padding-top: 31px;
         }
@@ -417,11 +415,11 @@ body {
             align-items: center;
             gap: 30px;
 
-            @media (max-width: 960px) {
+            @media (max-width: $breakpoint-960) {
                 grid-template-columns: minmax(0, 550px);
                 gap: 96px;
             }
-            @media (max-width: 480px) {
+            @media (max-width: $breakpoint-480) {
                 gap: 70px;
             }
 
@@ -451,11 +449,11 @@ body {
 
                             .percent {
                                 margin-top: 9px;
-                                font-family: var(--font-opensans);
+                                font-family: $font-opensans;
                                 font-size: 14px;
                                 font-weight: 600;
                                 line-height: 14px;
-                                color: var(--color-blue);
+                                color: $color-blue;
                             }
                         }
 
@@ -463,12 +461,12 @@ body {
                             width: 90%;
                             margin-top: 10px;
                             height: 7px;
-                            background: var(--color-blue);
+                            background: $color-blue;
 
                             &::after {
                                 display: block;
                                 height: 7px;
-                                background: var(--color-grey);
+                                background: $color-grey;
                                 width: 100%;
                             }
                         }
@@ -487,24 +485,24 @@ body {
         gap: 30px;
         grid-template-columns: minmax(480px, 611px) minmax(400px, 550px);
 
-        @media (max-width: 960px) {
+        @media (max-width: $breakpoint-960) {
             margin-top: -214px;
             grid-template-columns: minmax(0, 911px);
             justify-content: center;
             gap: 60px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: $breakpoint-768) {
             margin-top: -211px;
         }
-        @media (max-width: 480px) {
+        @media (max-width: $breakpoint-480) {
             margin-top: -275px;
         }
-        @media (max-width: 360px) {
+        @media (max-width: $breakpoint-360) {
             margin-top: -123px;
         }
 
         .left-column {
-            @media (max-width: 960px) {
+            @media (max-width: $breakpoint-960) {
                 order: 2;
             }
 
@@ -524,7 +522,7 @@ body {
                 grid-template-columns: 1fr 1fr;
                 gap: 20px 35px;
 
-                @media (max-width: 480px) {
+                @media (max-width: $breakpoint-480) {
                     grid-template-columns: 1fr;
                 }
 
@@ -534,12 +532,12 @@ body {
                     align-items: center;
                     gap: 10px;
                     padding: 13px;
-                    box-shadow: var(--shadow-secondary);
-                    font-family: var(--font-opensans);
+                    box-shadow: $shadow-secondary;
+                    font-family: $font-opensans;
                     font-size: 15px;
                     font-weight: 600;
                     line-height: 22.5px;
-                    color: var(--color-black);
+                    color: $color-black;
                 }
             }
         }
@@ -548,7 +546,7 @@ body {
             width: 100%;
             max-width: 550px;
 
-            @media (max-width: 960px) {
+            @media (max-width: $breakpoint-960) {
                 order: 1;
                 margin-left: auto;
                 margin-right: auto;
@@ -567,24 +565,24 @@ body {
         display: flex;
         align-items: center;
 
-        @media (max-width: 960px) {
+        @media (max-width: $breakpoint-960) {
             margin-top: 60px;
             background-size: 100vw 100%;
             align-items: start;
             padding-top: 168px;
             padding-bottom: 174px;
         }
-        @media (max-width: 480px) {
+        @media (max-width: $breakpoint-480) {
             margin-top: 40px;
             padding-bottom: 206px;
             padding-top: 159px;
         }
-        @media (max-width: 360px) {
+        @media (max-width: $breakpoint-360) {
             padding-bottom: 182px;
         }
 
         .title {
-            color: var(--color-blue);
+            color: $color-blue;
             text-align: center;
         }
 
@@ -594,7 +592,7 @@ body {
             grid-template-columns: repeat(4, auto);
             gap: 10px;
 
-            @media (max-width: 960px) {
+            @media (max-width: $breakpoint-960) {
                 max-width: 575px;
                 margin-top: 98px;
                 margin-left: auto;
@@ -605,10 +603,10 @@ body {
             @media (max-width: 600px) {
                 gap: 60px 26px;
             }
-            @media (max-width: 480px) {
+            @media (max-width: $breakpoint-480) {
                 margin-top: 60px;
             }
-            @media (max-width: 360px) {
+            @media (max-width: $breakpoint-360) {
                 gap: 40px;
                 grid-template-columns: 210px;
                 justify-content: center;
@@ -618,19 +616,19 @@ body {
                 display: flex;
                 align-items: center;
                 gap: 15px;
-                color: var(--color-blue);
+                color: $color-blue;
 
                 img {
-                    @media (max-width: 480px) {
+                    @media (max-width: $breakpoint-480) {
                         height: 32px;
                     }
-                    @media (max-width: 360px) {
+                    @media (max-width: $breakpoint-360) {
                         height: auto;
                     }
                 }
 
                 .number {
-                    font-family: var(--font-poppins);
+                    font-family: $font-poppins;
                     font-size: 24px;
                     font-weight: 700;
                     line-height: 24px;
@@ -638,7 +636,7 @@ body {
 
                 .description {
                     margin-top: 5px;
-                    font-family: var(--font-poppins);
+                    font-family: $font-poppins;
                     font-size: 16px;
                     font-weight: 500;
                     line-height: 16px;
@@ -667,26 +665,26 @@ body {
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
 
-            @media (max-width: 960px) {
+            @media (max-width: $breakpoint-960) {
                 margin-top: 76px;
                 grid-template-columns: minmax(200px, 350px) minmax(200px, 350px);
                 justify-content: center;
             }
-            @media (max-width: 480px) {
+            @media (max-width: $breakpoint-480) {
                 grid-template-columns: 1fr;
             }
 
             div {
-                color: var(--color-blue);
-                box-shadow: var(--shadow-secondary);
+                color: $color-blue;
+                box-shadow: $shadow-secondary;
                 padding: 17px;
-                border-radius: var(--radius-sm);
+                border-radius: $radius-sm;
 
-                @media (max-width: 960px) {
+                @media (max-width: $breakpoint-960) {
                     width: 100%;
                     max-width: 350px;
 
-                    @media (max-width: 480px) {
+                    @media (max-width: $breakpoint-480) {
                         margin-left: auto;
                         margin-right: auto;
                     }
@@ -697,7 +695,7 @@ body {
                         margin-left: auto;
                         margin-right: auto;
 
-                        @media (max-width: 480px) {
+                        @media (max-width: $breakpoint-480) {
                             grid-column-start: auto;
                             grid-column-end: auto;
                         }
@@ -717,17 +715,17 @@ body {
         background-repeat: no-repeat;
         display: flex;
         align-items: end;
-        color: var(--color-white);
+        color: $color-white;
 
-        @media (max-width: 960px) {
+        @media (max-width: $breakpoint-960) {
             margin-top: 80px;
             min-height: auto;
             align-items: start;
         }
-        @media (max-width: 480px) {
+        @media (max-width: $breakpoint-480) {
             margin-top: 76px;
         }
-        @media (max-width: 360px) {
+        @media (max-width: $breakpoint-360) {
             margin-top: 60px;
         }
 
@@ -739,15 +737,15 @@ body {
                 align-items: center;
                 gap: 30px;
 
-                @media (max-width: 960px) {
+                @media (max-width: $breakpoint-960) {
                     grid-template-columns: minmax(0, 556px);
                     justify-content: center;
                     gap: 60px;
                 }
-                @media (max-width: 480px) {
+                @media (max-width: $breakpoint-480) {
                     grid-template-columns: 1fr;
                 }
-                @media (max-width: 360px) {
+                @media (max-width: $breakpoint-360) {
                     gap: 12px;
                 }
 
@@ -755,21 +753,21 @@ body {
                     width: 100%;
                     max-width: 463px;
 
-                    @media (max-width: 960px) {
+                    @media (max-width: $breakpoint-960) {
                         margin: -20px auto 0 auto;
                     }
-                    @media (max-width: 480px) {
+                    @media (max-width: $breakpoint-480) {
                         margin-top: -16px;
                         max-width: 365px;
                     }
-                    @media (max-width: 360px) {
+                    @media (max-width: $breakpoint-360) {
                         margin-top: 30px;
                     }
                 }
 
                 .right-column {
                     .subtitle {
-                        color: var(--color-white);
+                        color: $color-white;
                     }
 
                     h3 {
@@ -783,8 +781,8 @@ body {
                             width: 100%;
                             max-width: 270px;
                             display: block;
-                            border: 1px solid var(--color-greyblue);
-                            font-family: var(--font-roboto);
+                            border: 1px solid $color-greyblue;
+                            font-family: $font-roboto;
                             font-size: 16px;
                             font-weight: 400;
                             line-height: 36px;
@@ -792,7 +790,7 @@ body {
                             margin-top: 25px;
 
                             &::placeholder {
-                                color: var(--color-greydark);
+                                color: $color-greydark;
                             }
                         }
 
@@ -802,10 +800,10 @@ body {
 
                         button {
                             margin-top: 25px;
-                            background: var(--color-blue);
+                            background: $color-blue;
                             padding: 15px 40px;
                             text-transform: inherit;
-                            font-family: var(--font-opensans);
+                            font-family: $font-opensans;
                             font-size: 15px;
                             font-weight: 400;
                             line-height: 15px;
@@ -816,19 +814,19 @@ body {
             }
 
             .subcontent {
-                font-family: var(--font-opensans);
+                font-family: $font-opensans;
                 margin-top: 40px;
                 text-align: center;
                 padding-top: 24px;
                 padding-bottom: 24px;
 
-                @media (max-width: 960px) {
+                @media (max-width: $breakpoint-960) {
                     margin-top: 40px;
                 }
-                @media (max-width: 480px) {
+                @media (max-width: $breakpoint-480) {
                     font-size: 14px;
                 }
-                @media (max-width: 360px) {
+                @media (max-width: $breakpoint-360) {
                     margin-top: 113px;
                     font-size: 11px;
                 }
