@@ -719,16 +719,52 @@ body {
         align-items: end;
         color: var(--color-white);
 
+        @media (max-width: 960px) {
+            margin-top: 80px;
+            min-height: auto;
+            align-items: start;
+        }
+        @media (max-width: 480px) {
+            margin-top: 76px;
+        }
+        @media (max-width: 360px) {
+            margin-top: 60px;
+        }
+
         .container {
             .content {
                 display: grid;
-                grid-template-columns: minmax(0, 550px) 555px;
+                grid-template-columns: minmax(350px, 550px) auto;
                 justify-content: space-between;
                 align-items: center;
                 gap: 30px;
 
+                @media (max-width: 960px) {
+                    grid-template-columns: minmax(0, 556px);
+                    justify-content: center;
+                    gap: 60px;
+                }
+                @media (max-width: 480px) {
+                    grid-template-columns: 1fr;
+                }
+                @media (max-width: 360px) {
+                    gap: 12px;
+                }
+
                 img {
+                    width: 100%;
                     max-width: 463px;
+
+                    @media (max-width: 960px) {
+                        margin: -20px auto 0 auto;
+                    }
+                    @media (max-width: 480px) {
+                        margin-top: -16px;
+                        max-width: 365px;
+                    }
+                    @media (max-width: 360px) {
+                        margin-top: 30px;
+                    }
                 }
 
                 .right-column {
@@ -785,6 +821,17 @@ body {
                 text-align: center;
                 padding-top: 24px;
                 padding-bottom: 24px;
+
+                @media (max-width: 960px) {
+                    margin-top: 40px;
+                }
+                @media (max-width: 480px) {
+                    font-size: 14px;
+                }
+                @media (max-width: 360px) {
+                    margin-top: 113px;
+                    font-size: 11px;
+                }
             }
         }
     }
