@@ -637,6 +637,16 @@ body .time-in-it .achievements .item {
   gap: 15px;
   color: var(--color-blue);
 }
+@media (max-width: 480px) {
+  body .time-in-it .achievements .item img {
+    height: 32px;
+  }
+}
+@media (max-width: 360px) {
+  body .time-in-it .achievements .item img {
+    height: auto;
+  }
+}
 body .time-in-it .achievements .item .number {
   font-family: var(--font-poppins);
   font-size: 24px;

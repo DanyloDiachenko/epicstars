@@ -620,6 +620,15 @@ body {
                 gap: 15px;
                 color: var(--color-blue);
 
+                img {
+                    @media (max-width: 480px) {
+                        height: 32px;
+                    }
+                    @media (max-width: 360px) {
+                        height: auto;
+                    }
+                }
+
                 .number {
                     font-family: var(--font-poppins);
                     font-size: 24px;
