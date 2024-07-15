@@ -286,7 +286,7 @@ const getCookie = (name) => {
 
 /* Changing Language Handler */
 const changeLanguage = (lng) => {
-    setCookie("language", lng, 30); // Сохранить язык в куки на 30 дней
+    setCookie("language", lng, 30);
     const elements = document.querySelectorAll("[data-lang]");
     elements.forEach((el) => {
         const key = el.getAttribute("data-lang");
@@ -294,6 +294,20 @@ const changeLanguage = (lng) => {
             el.alt = translations[lng][key];
         } else if (el.tagName === "INPUT") {
             el.placeholder = translations[lng][key];
+        } else if (el.children.length > 0) {
+            let foundTextNode = false;
+            Array.from(el.childNodes).forEach((node) => {
+                if (node.nodeType === Node.TEXT_NODE && !foundTextNode) {
+                    node.nodeValue = translations[lng][key];
+                    foundTextNode = true;
+                }
+            });
+            if (!foundTextNode) {
+                const textNode = document.createTextNode(
+                    translations[lng][key],
+                );
+                el.insertBefore(textNode, el.firstChild);
+            }
         } else {
             el.textContent = translations[lng][key];
         }
