@@ -488,21 +488,56 @@
                         <form action="?" method="POST" id="application-form">
                             <input
                                 type="text"
-                                required
                                 placeholder="Ваше ім'я"
                                 data-lang="footerYourName"
+                                id="application-form-name"
                             />
+                            <div
+                                class="error"
+                                id="application-form-name-error"
+                                data-lang="footerNameError"
+                            >
+                                Це поле - обовʼязкове!
+                            </div>
                             <input
-                                type="tel"
-                                required
-                                placeholder="Номер телефону"
-                                data-lang="footerPhoneNumber"
+                                type="email"
+                                placeholder="Email"
+                                data-lang="footerEmail"
+                                id="application-form-email"
                             />
+                            <div
+                                class="error"
+                                id="application-form-email-length-error"
+                                data-lang="footerEmailLengthError"
+                            >
+                                Це поле - обовʼязкове!
+                            </div>
+                            <div
+                                class="error"
+                                id="application-form-email-validate-error"
+                                data-lang="footerEmailValidateError"
+                            >
+                                Уведіть валідний email!
+                            </div>
                             <div
                                 class="g-recaptcha"
                                 data-sitekey="6LfoRg8qAAAAAOBe_X697t8t_KoHjrFq-beZFD1Y"
                             ></div>
+                            <div
+                                class="error"
+                                id="application-form-captcha-error"
+                                data-lang="footerCaptchaError"
+                            >
+                                Підтвердіть, що Ви не робот!
+                            </div>
                             <button data-lang="footerSend">Відправити</button>
+                            <div
+                                class="success"
+                                id="application-form-success"
+                                data-lang="footerSuccessMessage"
+                            >
+                                Дякуємо, успішно відправлено
+                            </div>
                         </form>
                     </div>
                 </div>

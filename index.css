@@ -125,6 +125,25 @@ button:hover {
   background: #1074d8;
 }
 
+input {
+  display: block;
+  margin-top: 25px;
+  border: 1px solid #dfe3ed;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 270px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 36px;
+  font-family: "Roboto", sans-serif;
+}
+input::-moz-placeholder {
+  color: #999999;
+}
+input::placeholder {
+  color: #999999;
+}
+
 /*  */
 .container {
   margin-right: auto;
@@ -857,26 +876,23 @@ body footer .container .content .right-column h3 {
 body footer .container .content .right-column form {
   margin-top: 56px;
 }
-body footer .container .content .right-column form input {
-  display: block;
-  margin-top: 25px;
-  border: 1px solid #dfe3ed;
-  padding: 5px 10px;
-  width: 100%;
-  max-width: 270px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 36px;
-  font-family: "Roboto", sans-serif;
-}
-body footer .container .content .right-column form input::-moz-placeholder {
-  color: #999999;
-}
-body footer .container .content .right-column form input::placeholder {
-  color: #999999;
-}
 body footer .container .content .right-column form .g-recaptcha {
   margin-top: 25px;
+}
+body footer .container .content .right-column form .error,
+body footer .container .content .right-column form .success {
+  margin-top: 5px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  display: none;
+}
+body footer .container .content .right-column form .error.error,
+body footer .container .content .right-column form .success.error {
+  color: #ff0000;
+}
+body footer .container .content .right-column form .error.success,
+body footer .container .content .right-column form .success.success {
+  color: #30d930;
 }
 body footer .container .content .right-column form button {
   margin-top: 25px;

@@ -1,17 +1,75 @@
 const applicationForm = document.querySelector("#application-form");
+const applicationFormNameInput = document.querySelector(
+    "#application-form-name",
+);
+const applicationFormEmailInput = document.querySelector(
+    "#application-form-email",
+);
+const applicationFormSuccessMessage = document.querySelector(
+    "#application-form-success",
+);
+const applicationFormNameErrorMessage = document.querySelector(
+    "#application-form-name-error",
+);
+const applicationFormEmailLengthErrorMessage = document.querySelector(
+    "#application-form-email-length-error",
+);
+const applicationFormEmailValidateErrorMessage = document.querySelector(
+    "#application-form-email-validate-error",
+);
+const applicationFormCaptchaErrorMessage = document.querySelector(
+    "#application-form-captcha-error",
+);
+/*  */
 const navigationMenu = document.querySelector("#navigation-menu");
 const burgerButton = document.querySelector("#burger-button");
 
-applicationForm.addEventListener("submit", (e) => {
+function validateEmail(email) {
+    const pattern =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return pattern.test(email);
+}
+
+applicationForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    let isValid = true;
+    document.querySelectorAll(".error").forEach((el) => {
+        el.style.display = "none";
+    });
+    applicationFormSuccessMessage.style.display = "none";
+
+    if (!applicationFormNameInput.value.trim()) {
+        applicationFormNameErrorMessage.style.display = "block";
+        isValid = false;
+    }
+
+    if (!applicationFormEmailInput.value.trim()) {
+        applicationFormEmailLengthErrorMessage.style.display = "block";
+        isValid = false;
+    } else if (!validateEmail(applicationFormEmailInput.value)) {
+        applicationFormEmailValidateErrorMessage.style.display = "block";
+        isValid = false;
+    }
+
     const captchaResponse = grecaptcha.getResponse();
-    if (captchaResponse.length === 0) {
-        alert("Captcha not completed");
-        throw new Error("Captcha not completed");
-    } else {
-        alert("Success");
-        location.reload();
+    if (!captchaResponse) {
+        applicationFormCaptchaErrorMessage.style.display = "block";
+        isValid = false;
+    }
+
+    if (isValid) {
+        try {
+            applicationFormSuccessMessage.style.display = "block";
+            setTimeout(() => {
+                applicationFormNameInput.value = "";
+                applicationFormEmailInput.value = "";
+                grecaptcha.reset();
+                applicationFormSuccessMessage.style.display = "none";
+            }, 3000);
+        } catch (error) {
+            console.error(error);
+        }
     }
 });
 
@@ -96,9 +154,17 @@ const translations = {
         footerContactUs: "Зв'яжіться з нами",
         footerCallToAction: "Залиште заявку на зворотний зв'язок",
         footerYourName: "Ваше ім'я",
-        footerPhoneNumber: "Номер телефону",
+        footerEmail: "Email",
         footerSend: "Відправити",
         footerRights: "Copyright 2019-2022 © Skyweb Co. Всі права захищені.",
+        footerYourName: "Ваше ім'я",
+        footerEmail: "Email",
+        footerSend: "Відправити",
+        footerNameError: "Це поле - обовʼязкове!",
+        footerEmailLengthError: "Це поле - обовʼязкове!",
+        footerEmailValidateError: "Уведіть валідний email!",
+        footerCaptchaError: "Підтвердіть, що Ви не робот!",
+        footerSuccessMessage: "Дякуємо, успішно відправлено",
     },
     eng: {
         headerLogoAlt: "Logo",
@@ -179,9 +245,17 @@ const translations = {
         footerContactUs: "Contact us",
         footerCallToAction: "Submit a request for feedback",
         footerYourName: "Your name",
-        footerPhoneNumber: "Phone number",
+        footerEmail: "Email",
         footerSend: "Send",
         footerRights: "Copyright 2019-2022 © Skyweb Co. All rights reserved.",
+        footerYourName: "Your name",
+        footerEmail: "Email",
+        footerSend: "Send",
+        footerNameError: "This field is required!",
+        footerEmailLengthError: "This field is required!",
+        footerEmailValidateError: "Please enter a valid email!",
+        footerCaptchaError: "Please verify that you are not a robot!",
+        footerSuccessMessage: "Thank you, successfully sent",
     },
 };
 
@@ -189,27 +263,13 @@ function changeLanguage(lng) {
     const elements = document.querySelectorAll("[data-lang]");
     elements.forEach((el) => {
         const key = el.getAttribute("data-lang");
-
-        if (el.children.length > 0) {
-            let foundTextNode = false;
-            Array.from(el.childNodes).forEach((node) => {
-                if (node.nodeType === Node.TEXT_NODE && !foundTextNode) {
-                    node.nodeValue = translations[lng][key];
-                    foundTextNode = true;
-                }
-            });
-            if (!foundTextNode) {
-                const textNode = document.createTextNode(
-                    translations[lng][key],
-                );
-                el.insertBefore(textNode, el.firstChild);
-            }
-        } else {
-            el.textContent = translations[lng][key];
-        }
-
         if (el.tagName === "IMG") {
             el.alt = translations[lng][key];
+        } else if (el.tagName === "INPUT" || el.tagName === "BUTTON") {
+            el.placeholder = translations[lng][key];
+            el.textContent = translations[lng][key];
+        } else {
+            el.textContent = translations[lng][key];
         }
     });
 
