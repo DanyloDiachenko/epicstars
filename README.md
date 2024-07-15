@@ -1,1 +1,0 @@
-1. add vercel (production) domain to reCaptcha
