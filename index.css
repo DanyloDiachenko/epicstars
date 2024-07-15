@@ -1,9 +1,18 @@
+/* Variables */
+/* fonts */
+/* colors */
+/* border-radiuses */
+/* box-shadowes */
+/* media breakpoints */
+/* transition */
+/* clean default styling */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Customize global used elements */
 h1 {
   color: #ffffff;
   font-weight: 800;
@@ -144,7 +153,7 @@ input::placeholder {
   color: #999999;
 }
 
-/*  */
+/* Custom global used Classes */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -192,20 +201,20 @@ input::placeholder {
   font-family: "Poppins", sans-serif;
 }
 
-/*  */
+/* HTML Styling */
 body {
   background-image: url("./images/backgrounds/main.png");
   background-size: 100vw 746px;
   background-repeat: no-repeat;
   color: #333333;
-  /*  */
-  /*  */
-  /*  */
-  /*  */
-  /*  */
-  /*  */
-  /*  */
-  /*  */
+  /* Header */
+  /* Main Section */
+  /* Services Section */
+  /* About Section */
+  /* Why We Section */
+  /* Time in It Section */
+  /* Join Us Section */
+  /* Footer */
 }
 @media (max-width: 960px) {
   body {
@@ -761,11 +770,11 @@ body .join-us .jobs {
   }
 }
 body .join-us .jobs a {
+  transition: 0.3s;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   padding: 17px;
   color: #1074d8;
-  transition: 0.3s;
 }
 body .join-us .jobs a:hover {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
@@ -881,10 +890,10 @@ body footer .container .content .right-column form .g-recaptcha {
 }
 body footer .container .content .right-column form .error,
 body footer .container .content .right-column form .success {
+  display: none;
   margin-top: 5px;
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
-  display: none;
 }
 body footer .container .content .right-column form .error.error,
 body footer .container .content .right-column form .success.error {
@@ -895,6 +904,7 @@ body footer .container .content .right-column form .success.success {
   color: #30d930;
 }
 body footer .container .content .right-column form button {
+  transition: 0.3s;
   margin-top: 25px;
   background: #1074d8;
   padding: 15px 40px;
@@ -904,7 +914,6 @@ body footer .container .content .right-column form button {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   text-transform: inherit;
-  transition: 0.3s;
 }
 body footer .container .content .right-column form button:hover {
   background: #789dd8;
@@ -931,4 +940,4 @@ body footer .container .subcontent {
     margin-top: 113px;
     font-size: 11px;
   }
-}/*# sourceMappingURL=index.css.map */
+}

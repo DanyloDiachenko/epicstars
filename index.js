@@ -1,3 +1,4 @@
+/* Translation Strings */
 const translations = {
     ua: {
         headerLogoAlt: "Логотип",
@@ -184,6 +185,7 @@ const translations = {
     },
 };
 
+/* Form & Inputes & Messages */
 const applicationForm = document.querySelector("#application-form");
 const applicationFormNameInput = document.querySelector(
     "#application-form-name",
@@ -207,19 +209,23 @@ const applicationFormCaptchaErrorMessage = document.querySelector(
     "#application-form-captcha-error",
 );
 
+/* Header Menus */
 const navigationMenu = document.querySelector("#navigation-menu");
 const burgerButton = document.querySelector("#burger-button");
 
+/* Email Validation */
 const validateEmail = (email) => {
     const pattern =
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return pattern.test(email);
 };
 
+/* Submit Application Form Handler */
 applicationForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     let isValid = true;
+
     document.querySelectorAll(".error").forEach((el) => {
         el.style.display = "none";
     });
@@ -259,13 +265,13 @@ applicationForm.addEventListener("submit", (e) => {
     }
 });
 
+/* Cookies Handlers */
 const setCookie = (name, value, days) => {
     const d = new Date();
     d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
     const expires = "expires=" + d.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 };
-
 const getCookie = (name) => {
     const nameEQ = name + "=";
     const ca = document.cookie.split(";");
@@ -278,6 +284,7 @@ const getCookie = (name) => {
     return null;
 };
 
+/* Changing Language Handler */
 const changeLanguage = (lng) => {
     setCookie("language", lng, 30); // Сохранить язык в куки на 30 дней
     const elements = document.querySelectorAll("[data-lang]");
@@ -302,11 +309,13 @@ const changeLanguage = (lng) => {
     });
 };
 
+/* Set Language after page loading */
 document.addEventListener("DOMContentLoaded", () => {
     const savedLanguage = getCookie("language") || "ua";
     changeLanguage(savedLanguage);
 });
 
+/* Opening Burger Menu (Mobile version) */
 const onBurgerMenuClick = () => {
     if (navigationMenu.classList.contains("active")) {
         navigationMenu.classList.remove("active");
@@ -314,9 +323,9 @@ const onBurgerMenuClick = () => {
         navigationMenu.classList.add("active");
     }
 };
-
 burgerButton.addEventListener("click", onBurgerMenuClick);
 
+/* Closing Burger Menu if click not in Burger Menu */
 document.addEventListener("click", (event) => {
     if (
         !burgerButton.contains(event.target) &&

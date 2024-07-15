@@ -1,8 +1,10 @@
+/* Variables */
+/* fonts */
 $font-lato: "Lato", sans-serif;
 $font-opensans: "Open Sans", sans-serif;
 $font-poppins: "Poppins", sans-serif;
 $font-roboto: "Roboto", sans-serif;
-
+/* colors */
 $color-white: #ffffff;
 $color-bluelight: #789dd8;
 $color-blue: #1074d8;
@@ -13,29 +15,31 @@ $color-greyblue: #dfe3ed;
 $color-greydark: #999999;
 $color-red: #ff0000;
 $color-green: #30d930;
-
+/* border-radiuses */
 $radius-sm: 8px;
 $radius-md: 10px;
 $radius-lg: 15px;
-
+/* box-shadowes */
 $shadow-article: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
 $shadow-secondary: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
 $shadow-dark: 0px 4px 6px rgba(0, 0, 0, 0.5);
-
+/* media breakpoints */
 $breakpoint-1440: 1440px;
 $breakpoint-960: 960px;
 $breakpoint-768: 768px;
 $breakpoint-480: 480px;
 $breakpoint-360: 360px;
-
+/* transition */
 $transition: 0.3s;
 
+/* clean default styling */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Customize global used elements */
 h1 {
     color: $color-white;
     font-weight: 800;
@@ -162,7 +166,7 @@ input {
     }
 }
 
-/*  */
+/* Custom global used Classes */
 
 .container {
     margin-right: auto;
@@ -207,8 +211,7 @@ input {
     font-family: $font-poppins;
 }
 
-/*  */
-
+/* HTML Styling */
 body {
     background-image: url("./images/backgrounds/main.png");
     background-size: 100vw 746px;
@@ -219,8 +222,7 @@ body {
         background-size: 100vw 584px;
     }
 
-    /*  */
-
+    /* Header */
     header {
         display: flex;
         justify-content: space-between;
@@ -354,8 +356,7 @@ body {
         }
     }
 
-    /*  */
-
+    /* Main Section */
     .main {
         position: relative;
         margin-top: 40px;
@@ -415,8 +416,7 @@ body {
         }
     }
 
-    /*  */
-
+    /* Services Section */
     .services {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -467,8 +467,7 @@ body {
         }
     }
 
-    /*  */
-
+    /* About Section */
     .about {
         display: flex;
         align-items: center;
@@ -579,8 +578,7 @@ body {
         }
     }
 
-    /*  */
-
+    /* Why We Section */
     .why-we {
         display: grid;
         grid-template-columns: minmax(480px, 611px) minmax(400px, 550px);
@@ -663,8 +661,7 @@ body {
         }
     }
 
-    /*  */
-
+    /* Time in It Section */
     .time-in-it {
         display: flex;
         align-items: center;
@@ -759,8 +756,7 @@ body {
         }
     }
 
-    /*  */
-
+    /* Join Us Section */
     .join-us {
         text-align: center;
 
@@ -784,11 +780,11 @@ body {
             }
 
             a {
+                transition: $transition;
                 box-shadow: $shadow-secondary;
                 border-radius: $radius-sm;
                 padding: 17px;
                 color: $color-blue;
-                transition: $transition;
 
                 &:hover {
                     box-shadow: $shadow-dark;
@@ -819,8 +815,7 @@ body {
         }
     }
 
-    /*  */
-
+    /* Footer */
     footer {
         display: flex;
         align-items: end;
@@ -897,10 +892,10 @@ body {
 
                         .error,
                         .success {
+                            display: none;
                             margin-top: 5px;
                             font-weight: 500;
                             font-family: $font-opensans;
-                            display: none;
 
                             &.error {
                                 color: $color-red;
@@ -911,6 +906,7 @@ body {
                         }
 
                         button {
+                            transition: $transition;
                             margin-top: 25px;
                             background: $color-blue;
                             padding: 15px 40px;
@@ -920,7 +916,6 @@ body {
                             font-family: $font-opensans;
                             text-align: center;
                             text-transform: inherit;
-                            transition: $transition;
 
                             &:hover {
                                 background: $color-bluelight;
