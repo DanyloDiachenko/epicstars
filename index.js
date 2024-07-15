@@ -1,78 +1,3 @@
-const applicationForm = document.querySelector("#application-form");
-const applicationFormNameInput = document.querySelector(
-    "#application-form-name",
-);
-const applicationFormEmailInput = document.querySelector(
-    "#application-form-email",
-);
-const applicationFormSuccessMessage = document.querySelector(
-    "#application-form-success",
-);
-const applicationFormNameErrorMessage = document.querySelector(
-    "#application-form-name-error",
-);
-const applicationFormEmailLengthErrorMessage = document.querySelector(
-    "#application-form-email-length-error",
-);
-const applicationFormEmailValidateErrorMessage = document.querySelector(
-    "#application-form-email-validate-error",
-);
-const applicationFormCaptchaErrorMessage = document.querySelector(
-    "#application-form-captcha-error",
-);
-/*  */
-const navigationMenu = document.querySelector("#navigation-menu");
-const burgerButton = document.querySelector("#burger-button");
-
-function validateEmail(email) {
-    const pattern =
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return pattern.test(email);
-}
-
-applicationForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    let isValid = true;
-    document.querySelectorAll(".error").forEach((el) => {
-        el.style.display = "none";
-    });
-    applicationFormSuccessMessage.style.display = "none";
-
-    if (!applicationFormNameInput.value.trim()) {
-        applicationFormNameErrorMessage.style.display = "block";
-        isValid = false;
-    }
-
-    if (!applicationFormEmailInput.value.trim()) {
-        applicationFormEmailLengthErrorMessage.style.display = "block";
-        isValid = false;
-    } else if (!validateEmail(applicationFormEmailInput.value)) {
-        applicationFormEmailValidateErrorMessage.style.display = "block";
-        isValid = false;
-    }
-
-    const captchaResponse = grecaptcha.getResponse();
-    if (!captchaResponse) {
-        applicationFormCaptchaErrorMessage.style.display = "block";
-        isValid = false;
-    }
-
-    if (isValid) {
-        try {
-            applicationFormSuccessMessage.style.display = "block";
-            setTimeout(() => {
-                applicationFormNameInput.value = "";
-                applicationFormEmailInput.value = "";
-                grecaptcha.reset();
-                applicationFormSuccessMessage.style.display = "none";
-            }, 3000);
-        } catch (error) {
-            console.error(error);
-        }
-    }
-});
-
 const translations = {
     ua: {
         headerLogoAlt: "Логотип",
@@ -259,15 +184,109 @@ const translations = {
     },
 };
 
-function changeLanguage(lng) {
+const applicationForm = document.querySelector("#application-form");
+const applicationFormNameInput = document.querySelector(
+    "#application-form-name",
+);
+const applicationFormEmailInput = document.querySelector(
+    "#application-form-email",
+);
+const applicationFormSuccessMessage = document.querySelector(
+    "#application-form-success",
+);
+const applicationFormNameErrorMessage = document.querySelector(
+    "#application-form-name-error",
+);
+const applicationFormEmailLengthErrorMessage = document.querySelector(
+    "#application-form-email-length-error",
+);
+const applicationFormEmailValidateErrorMessage = document.querySelector(
+    "#application-form-email-validate-error",
+);
+const applicationFormCaptchaErrorMessage = document.querySelector(
+    "#application-form-captcha-error",
+);
+
+const navigationMenu = document.querySelector("#navigation-menu");
+const burgerButton = document.querySelector("#burger-button");
+
+const validateEmail = (email) => {
+    const pattern =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return pattern.test(email);
+};
+
+applicationForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let isValid = true;
+    document.querySelectorAll(".error").forEach((el) => {
+        el.style.display = "none";
+    });
+    applicationFormSuccessMessage.style.display = "none";
+
+    if (!applicationFormNameInput.value.trim()) {
+        applicationFormNameErrorMessage.style.display = "block";
+        isValid = false;
+    }
+
+    if (!applicationFormEmailInput.value.trim()) {
+        applicationFormEmailLengthErrorMessage.style.display = "block";
+        isValid = false;
+    } else if (!validateEmail(applicationFormEmailInput.value)) {
+        applicationFormEmailValidateErrorMessage.style.display = "block";
+        isValid = false;
+    }
+
+    const captchaResponse = grecaptcha.getResponse();
+    if (!captchaResponse) {
+        applicationFormCaptchaErrorMessage.style.display = "block";
+        isValid = false;
+    }
+
+    if (isValid) {
+        try {
+            applicationFormSuccessMessage.style.display = "block";
+            setTimeout(() => {
+                applicationFormNameInput.value = "";
+                applicationFormEmailInput.value = "";
+                grecaptcha.reset();
+                applicationFormSuccessMessage.style.display = "none";
+            }, 3000);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+});
+
+const setCookie = (name, value, days) => {
+    const d = new Date();
+    d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+};
+
+const getCookie = (name) => {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0)
+            return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+};
+
+const changeLanguage = (lng) => {
+    setCookie("language", lng, 30); // Сохранить язык в куки на 30 дней
     const elements = document.querySelectorAll("[data-lang]");
     elements.forEach((el) => {
         const key = el.getAttribute("data-lang");
         if (el.tagName === "IMG") {
             el.alt = translations[lng][key];
-        } else if (el.tagName === "INPUT" || el.tagName === "BUTTON") {
+        } else if (el.tagName === "INPUT") {
             el.placeholder = translations[lng][key];
-            el.textContent = translations[lng][key];
         } else {
             el.textContent = translations[lng][key];
         }
@@ -281,16 +300,22 @@ function changeLanguage(lng) {
             button.classList.remove("active");
         }
     });
-}
-changeLanguage("ua");
+};
 
-function onBurgerMenuClick() {
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLanguage = getCookie("language") || "ua";
+    changeLanguage(savedLanguage);
+});
+
+const onBurgerMenuClick = () => {
     if (navigationMenu.classList.contains("active")) {
         navigationMenu.classList.remove("active");
     } else {
         navigationMenu.classList.add("active");
     }
-}
+};
+
+burgerButton.addEventListener("click", onBurgerMenuClick);
 
 document.addEventListener("click", (event) => {
     if (
