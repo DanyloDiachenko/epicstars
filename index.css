@@ -89,12 +89,17 @@ p.line-height-md {
 }
 
 a {
+  transition: 0.3s;
+  cursor: pointer;
   color: #1074d8;
   font-weight: 500;
   font-size: 18px;
   line-height: 25.2px;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+}
+a:hover {
+  color: #789dd8;
 }
 @media (max-width: 960px) {
   a {
@@ -103,6 +108,8 @@ a {
 }
 
 button {
+  transition: 0.3s;
+  cursor: pointer;
   border: none;
   border-radius: 10px;
   background: #789dd8;
@@ -113,7 +120,9 @@ button {
   line-height: 14.4px;
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
-  cursor: pointer;
+}
+button:hover {
+  background: #1074d8;
 }
 
 /*  */
@@ -208,12 +217,16 @@ body header .left-column .languages {
   }
 }
 body header .left-column .languages button {
+  transition: 0.3s;
   background: none;
   padding: 0;
   color: rgba(255, 255, 255, 0.4);
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
+}
+body header .left-column .languages button:hover {
+  color: #999999;
 }
 body header .left-column .languages button.active {
   color: #ffffff;
@@ -249,12 +262,16 @@ body header .navigation-wrapper nav {
   }
 }
 body header .navigation-wrapper nav a {
+  transition: 0.3s;
   color: #ffffff;
   font-weight: 500;
   font-size: 18px;
   line-height: 21.6px;
   font-family: "Lato", sans-serif;
   text-decoration: none;
+}
+body header .navigation-wrapper nav a:hover {
+  color: #dfe3ed;
 }
 @media (max-width: 960px) {
   body header .navigation-wrapper nav a {
@@ -280,6 +297,9 @@ body header .right-column a {
   line-height: 21.6px;
   font-family: "Lato", sans-serif;
   text-decoration: none;
+}
+body header .right-column a:hover {
+  color: #dfe3ed;
 }
 body header .right-column button {
   box-shadow: 0px 1px 10px 0px #779dd8;
@@ -375,10 +395,14 @@ body .services {
   }
 }
 body .services article {
+  transition: 0.3s;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  padding: 26px 18px;
+  padding: 26px 30px;
   text-align: center;
+}
+body .services article:hover {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 960px) {
   body .services article {
@@ -566,6 +590,7 @@ body .why-we .left-column .advantages a {
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: 0.3s;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
   padding: 13px;
   width: 100%;
@@ -574,6 +599,10 @@ body .why-we .left-column .advantages a {
   font-size: 15px;
   line-height: 22.5px;
   font-family: "Open Sans", sans-serif;
+}
+body .why-we .left-column .advantages a:hover {
+  gap: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 body .why-we .banner {
   width: 100%;
@@ -712,26 +741,30 @@ body .join-us .jobs {
     grid-template-columns: 1fr;
   }
 }
-body .join-us .jobs div {
+body .join-us .jobs a {
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   padding: 17px;
   color: #1074d8;
+  transition: 0.3s;
+}
+body .join-us .jobs a:hover {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 960px) {
-  body .join-us .jobs div {
+  body .join-us .jobs a {
     width: 100%;
     max-width: 350px;
   }
 }
 @media (max-width: 960px) and (max-width: 480px) {
-  body .join-us .jobs div {
+  body .join-us .jobs a {
     margin-right: auto;
     margin-left: auto;
   }
 }
 @media (max-width: 960px) {
-  body .join-us .jobs div:last-child {
+  body .join-us .jobs a:last-child {
     grid-column-start: -3;
     grid-column-end: -1;
     margin-right: auto;
@@ -739,7 +772,7 @@ body .join-us .jobs div {
   }
 }
 @media (max-width: 960px) and (max-width: 480px) {
-  body .join-us .jobs div:last-child {
+  body .join-us .jobs a:last-child {
     grid-column-start: auto;
     grid-column-end: auto;
   }
@@ -855,6 +888,10 @@ body footer .container .content .right-column form button {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   text-transform: inherit;
+  transition: 0.3s;
+}
+body footer .container .content .right-column form button:hover {
+  background: #789dd8;
 }
 body footer .container .subcontent {
   margin-top: 40px;

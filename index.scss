@@ -106,6 +106,8 @@ p {
 }
 
 a {
+    transition: $transition;
+    cursor: pointer;
     color: $color-blue;
     font-weight: 500;
     font-size: 18px;
@@ -113,12 +115,18 @@ a {
     font-family: $font-poppins;
     text-decoration: none;
 
+    &:hover {
+        color: $color-bluelight;
+    }
+
     @media (max-width: $breakpoint-960) {
         font-size: 16px;
     }
 }
 
 button {
+    transition: $transition;
+    cursor: pointer;
     border: none;
     border-radius: $radius-md;
     background: $color-bluelight;
@@ -129,7 +137,10 @@ button {
     line-height: 14.4px;
     font-family: $font-lato;
     text-transform: uppercase;
-    cursor: pointer;
+
+    &:hover {
+        background: $color-blue;
+    }
 }
 
 /*  */
@@ -214,12 +225,17 @@ body {
                 }
 
                 button {
+                    transition: $transition;
                     background: none;
                     padding: 0;
                     color: $color-greylight;
                     font-weight: 400;
                     font-size: 18px;
                     line-height: 21.6px;
+
+                    &:hover {
+                        color: $color-greydark;
+                    }
 
                     &.active {
                         color: $color-white;
@@ -259,12 +275,17 @@ body {
                 }
 
                 a {
+                    transition: $transition;
                     color: $color-white;
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 21.6px;
                     font-family: $font-lato;
                     text-decoration: none;
+
+                    &:hover {
+                        color: $color-greyblue;
+                    }
 
                     @media (max-width: $breakpoint-960) {
                         display: block;
@@ -291,6 +312,10 @@ body {
                 line-height: 21.6px;
                 font-family: $font-lato;
                 text-decoration: none;
+
+                &:hover {
+                    color: $color-greyblue;
+                }
             }
 
             button {
@@ -389,10 +414,15 @@ body {
         }
 
         article {
+            transition: $transition;
             box-shadow: $shadow-article;
             border-radius: $radius-lg;
-            padding: 26px 18px;
+            padding: 26px 30px;
             text-align: center;
+
+            &:hover {
+                box-shadow: $shadow-dark;
+            }
 
             @media (max-width: $breakpoint-960) {
                 padding: 26px 10px;
@@ -584,6 +614,7 @@ body {
                     display: flex;
                     align-items: center;
                     gap: 10px;
+                    transition: $transition;
                     box-shadow: $shadow-secondary;
                     padding: 13px;
                     width: 100%;
@@ -592,6 +623,11 @@ body {
                     font-size: 15px;
                     line-height: 22.5px;
                     font-family: $font-opensans;
+
+                    &:hover {
+                        gap: 20px;
+                        box-shadow: $shadow-dark;
+                    }
                 }
             }
         }
@@ -728,11 +764,16 @@ body {
                 grid-template-columns: 1fr;
             }
 
-            div {
+            a {
                 box-shadow: $shadow-secondary;
                 border-radius: $radius-sm;
                 padding: 17px;
                 color: $color-blue;
+                transition: $transition;
+
+                &:hover {
+                    box-shadow: $shadow-dark;
+                }
 
                 @media (max-width: $breakpoint-960) {
                     width: 100%;
@@ -862,6 +903,11 @@ body {
                             font-family: $font-opensans;
                             text-align: center;
                             text-transform: inherit;
+                            transition: $transition;
+
+                            &:hover {
+                                background: $color-bluelight;
+                            }
                         }
                     }
                 }
