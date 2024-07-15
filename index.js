@@ -291,10 +291,27 @@ const changeLanguage = (lng) => {
     elements.forEach((el) => {
         const key = el.getAttribute("data-lang");
         if (el.tagName === "IMG") {
+            /* Translating alt attr in <img /> */
             el.alt = translations[lng][key];
         } else if (el.tagName === "INPUT") {
+            /* Translating placeholder attr in <input /> */
             el.placeholder = translations[lng][key];
         } else if (el.children.length > 0) {
+            /* Translating Unusual Code Architecture <h1 /> => <span />
+            <h1 data-lang="mainTitle">
+                        EPICSTARS — платформа, що об’єднує
+                        <span
+                            class="underline"
+                            data-lang="mainHighlightAdvertisers"
+                            >рекламодавців</span
+                        ><span data-lang="mainHighlightAnd">та</span
+                        ><span
+                            class="underline"
+                            data-lang="mainHighlightBlogers"
+                            >блогерів</span
+                        >
+                    </h1>
+            */
             let foundTextNode = false;
             Array.from(el.childNodes).forEach((node) => {
                 if (node.nodeType === Node.TEXT_NODE && !foundTextNode) {
